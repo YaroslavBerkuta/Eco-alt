@@ -404,6 +404,11 @@ body {
 }
 
 .header {
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
   padding: 14px 0;
   background: rgba(255, 255, 255, 0.6);
   -webkit-backdrop-filter: blur(20px);
@@ -544,7 +549,7 @@ body {
   font-size: 10px;
 }
 
-.submenu {
+.sub-menu {
   display: none;
   padding: 8px 0;
   border-radius: 8px;
@@ -553,19 +558,19 @@ body {
   overflow: auto;
 }
 
-.submenu::-webkit-scrollbar {
+.sub-menu::-webkit-scrollbar {
   display: none;
 }
 
-.submenu.active {
+.sub-menu.active {
   display: block;
 }
 
-.submenu li:not(:last-child) {
+.sub-menu li:not(:last-child) {
   margin-bottom: 15px;
 }
 
-.submenu li a {
+.sub-menu li a {
   display: block;
   color: black;
   padding: 10px 0 10px 10px;
@@ -578,10 +583,84 @@ body {
   letter-spacing: -0.009em;
 }
 
-.submenu li:hover {
+.sub-menu li:hover {
   background: rgba(0, 167, 89, 0.04);
 }
 
-.submenu li:hover a {
-  color: #00A759;
+.sub-menu li:hover a {
+  color: #00a759;
+}
+
+.hero {
+  padding-top: 64px;
+}
+
+.hero__flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.hero__title {
+  max-width: 647px;
+}
+
+.hero__title h1 {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 64px;
+  line-height: 78px;
+  color: #00a759;
+}
+
+.hero__media video {
+  width: 648px;
+  height: 491px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.menu__flex {
+  padding-top: 128px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.small-menu {
+  background: #00a759;
+  border-radius: 4.41509px;
+  width: clamp(200px, 100%, 312px);
+  padding: 18px;
+}
+
+.small-menu li {
+  margin-bottom: 14px;
+}
+
+.small-menu li:first-child {
+  margin-bottom: 18px;
+}
+
+.small-menu li:first-child a {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 34px;
+  color: #fff;
+  background: url(../img/diagonal-arrow.svg) right center no-repeat;
+  display: block;
+}
+
+.small-menu li a {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 150%;
+  color: #fff;
 }
