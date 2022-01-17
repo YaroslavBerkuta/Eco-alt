@@ -15,7 +15,7 @@ loader.load().then(() => {
   new google.maps.Marker({
     position: { lat: 49.43144054152188, lng: 27.011101098858056 },
     map,
-    icon: "../img/mapPin.png"
+    icon: "/Eco-alt/img/mapPin.png"
   });
 });
 const menuList = document.querySelectorAll(".menu > li");
