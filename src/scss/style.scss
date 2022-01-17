@@ -380,12 +380,11 @@ section {
 .section-relative-navigation{
   position: relative;
   .swiper-button-prev {
-    left: 20%;
+    left: 15%;
     border: 3px solid #00a759;
     border-radius: 50%;
     width: 60px;
     height: 60px;
-    right: 20%;
     transform: rotate(180deg);
     svg {
       path {
@@ -401,7 +400,7 @@ section {
     border-radius: 50%;
     width: 60px;
     height: 60px;
-    right: 20%;
+    right: 15%;
     svg {
       path {
         fill: #00a759;
