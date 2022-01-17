@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  @@include('html/head.html',{ "title": "Catalog" })
+  <body>
+    @@include('html/header.html')
+    <main class="main">
+      <section>
+        <div class="container">
+          <div class="section__title">
+            <h1 class="title">Каталог</h1>
+            <form action="" class="form__search">
+              <input type="text" placeholder="Я шукаю..." />
+              <div class="search-btn">
+                <button type="submit">
+                  <img src="@img/search.svg" alt="" />
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+      <section class="shop">
+        <div class="container">
+          <div class="shop__top">
+            <p>720 товарів знайдено</p>
+            <form action="" class="filter">
+              <select name="" id="">
+                <option>За замовчуваням</option>
+                <option value="">За ціною від меншої до більшої</option>
+                <option value="">За ціною від більшої до меншої</option>
+              </select>
+            </form>
+          </div>
+          <div class="shop__bottom">
+            <aside class="shop__filter">
+              <div class="shop__filter-item">
+                <button class="accordion"><p>Виробник</p><img src="@img/shopFilterDown.svg"/></button>
+                <div class="panel">
+                  <p>Ответ на Вопрос 1...</p>
+                </div>
+              </div>
+              <div class="shop__filter-item">
+                <button class="accordion"><p>Компресор</p><img src="@img/shopFilterDown.svg"/></button>
+                <div class="panel">
+                  <p>Ответ на Вопрос 2...</p>
+                </div>
+              </div>
+
+              <div class="shop__filter-item">
+                <button class="accordion"><p>Площа приміщення, м²</p><img src="@img/shopFilterDown.svg"/></button>
+                <div class="panel">
+                  <p>Ответ на Вопрос 3 ...</p>
+                </div>
+              </div>
+              <div class="shop__filter-item">
+                <button class="accordion"><p>Режими роботи</p><img src="@img/shopFilterDown.svg"/></button>
+                <div class="panel">
+                  <p>Ответ на Вопрос 3 ...</p>
+                </div>
+              </div>
+              <div class="shop__filter-item">
+                <button class="accordion"><p>Ціна</p><img src="@img/shopFilterDown.svg"/></button>
+                <div class="panel">
+                  <p>Ответ на Вопрос 3 ...</p>
+                </div>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+      @@include('html/subscribe.html')
+    </main>
+    @@include('html/footer.html')
+    <script src="js/main.min.js"></script>
+  </body>
+</html>
