@@ -11,24 +11,38 @@
 
 ?>
 
-	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'eco-alt' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'eco-alt' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'eco-alt' ), 'eco-alt', '<a href="https://creatory.studio/">Creatory.studio</a>' );
-				?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
-</div><!-- #page -->
-
-<?php wp_footer(); ?>
-
+<footer class="footer">
+    <div class="container">
+        <div class="footer__flex">
+            <div class="footer__item">
+                <ul>
+                    <li><a href="">Каталог</a></li>
+                    <li><a href="">Послуги</a></li>
+                    <li><a href="">Об'єкти</a></li>
+                    <li><a href="">Контакти</a></li>
+                    <li><a href="">Про нас</a></li>
+                </ul>
+            </div>
+            <div class="footer__item">
+                <ul>
+                    <li><img src="img/masterCart.svg" alt=""></li>
+                    <li><img src="img/visa.svg" alt=""></li>
+                    <li><img src="img/gpay.svg" alt=""></li>
+                    <li><img src="img/applePay.svg" alt=""></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer__flex">
+            <div class="footer__item">
+                <ul>
+                    <li>м.Хмельницький, вул. Герцена 10</li>
+                    <li><a href="tel:+380978596027">+380978596027</a></li>
+                    <li><a href="mailto:office@ekoalt.km.ua">office@ekoalt.km.ua</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+<script src="js/main.min.js?_v=20220117155756"></script>
 </body>
 </html>
