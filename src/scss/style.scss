@@ -9,7 +9,7 @@ body {
   margin: 0 auto;
 }
 .header {
-  position: relative;
+  position: fixed;
   top: 0;
   left: 0;
   z-index: 999;
@@ -155,7 +155,7 @@ body {
   }
 }
 .hero {
-  padding-top: 64px;
+  padding-top: 140px;
 }
 .hero__flex {
   display: flex;
