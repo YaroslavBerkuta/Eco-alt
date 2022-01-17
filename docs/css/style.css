@@ -946,18 +946,11 @@ section {
   background: #00a759;
 }
 
-.section-relative {
+.section-relative-navigation {
   position: relative;
 }
 
-.section-relative .section__title {
-  position: absolute;
-  top: 20%;
-  left: 20%;
-  z-index: 10;
-}
-
-.section-relative .swiper-button-prev {
+.section-relative-navigation .swiper-button-prev {
   left: 20%;
   border: 3px solid #00a759;
   border-radius: 50%;
@@ -967,15 +960,15 @@ section {
   transform: rotate(180deg);
 }
 
-.section-relative .swiper-button-prev svg path {
+.section-relative-navigation .swiper-button-prev svg path {
   fill: #00a759;
 }
 
-.section-relative .swiper-button-prev:after {
+.section-relative-navigation .swiper-button-prev:after {
   content: none;
 }
 
-.section-relative .swiper-button-next {
+.section-relative-navigation .swiper-button-next {
   border: 3px solid #00a759;
   border-radius: 50%;
   width: 60px;
@@ -983,22 +976,33 @@ section {
   right: 20%;
 }
 
-.section-relative .swiper-button-next svg path {
+.section-relative-navigation .swiper-button-next svg path {
   fill: #00a759;
 }
 
-.section-relative .swiper-button-next:after {
+.section-relative-navigation .swiper-button-next:after {
   content: none;
 }
 
-.section-relative .swiper-button-disabled {
+.section-relative-navigation .swiper-button-disabled {
   background: #e6e6eb;
   border: 3px solid #e6e6eb;
   opacity: 1;
 }
 
-.section-relative .swiper-button-disabled svg path {
+.section-relative-navigation .swiper-button-disabled svg path {
   fill: #fff;
+}
+
+.section-relative {
+  position: relative;
+}
+
+.section-relative .section__title {
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  z-index: 10;
 }
 
 .subscribe__flex {

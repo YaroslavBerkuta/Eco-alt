@@ -377,14 +377,8 @@ section {
     }
   }
 }
-.section-relative {
+.section-relative-navigation{
   position: relative;
-  .section__title{
-    position: absolute;
-    top: 20%;
-    left: 20%;
-    z-index: 10;
-  }
   .swiper-button-prev {
     left: 20%;
     border: 3px solid #00a759;
@@ -426,6 +420,15 @@ section {
         fill: #fff;
       }
     }
+  }
+}
+.section-relative {
+  position: relative;
+  .section__title{
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    z-index: 10;
   }
 }
 .subscribe__flex {
