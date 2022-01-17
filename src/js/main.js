@@ -1,7 +1,23 @@
 import * as flsFunctions from "./modules/function.js";
-import Swiper, { Pagination } from "swiper";
+import Swiper, { Pagination, Grid, Navigation } from "swiper";
+import { Loader } from "@googlemaps/js-api-loader";
 flsFunctions.isWebp();
-Swiper.use([Pagination]);
+const loader = new Loader({
+  apiKey: "AIzaSyBQDEs_7l7DkIcUkxfuDYexdljxizTfdZM",
+});
+
+loader.load().then(() => {
+  const map = new google.maps.Map(document.getElementById("maphome"), {
+    center: { lat: 49.43144054152188, lng: 27.011101098858056 },
+    zoom: 15,
+    mapId: "2686bd5387548a27",
+  });
+  new google.maps.Marker({
+    position: { lat: 49.43144054152188, lng: 27.011101098858056 },
+    map,
+    icon: "../img/mapPin.png"
+  });
+});
 const menuList = document.querySelectorAll(".menu > li");
 const submenu = document.querySelectorAll(".sub-menu");
 menuList.forEach((item) => {
@@ -48,12 +64,19 @@ filterItem.forEach((item) => {
 
 const filterTovar = new Swiper(".filter__tovar", {
   slideClass: "filter___cart",
-  slidesPerView: 8,
+  slidesPerView: 4,
+  spaceBetween: 20,
+  modules: [Grid, Navigation, Pagination],
   grid: {
     rows: 2,
+    fill: "row",
   },
   pagination: {
     el: ".swiper-pagination.filter__tovar-pagination",
     clickable: true,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
   },
 });

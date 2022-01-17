@@ -11,6 +11,7 @@
   "author": "Yaroslav Berkuta",
   "license": "ISC",
   "dependencies": {
+    "@googlemaps/js-api-loader": "^1.13.2",
     "gulp-cli": "^2.3.0",
     "gulp-if": "^3.0.0",
     "normalize.css": "^8.0.1",
