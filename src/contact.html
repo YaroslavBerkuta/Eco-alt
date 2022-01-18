@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  @@include('html/head.html',{ "title": "Home" })
+  <body>
+    @@include('html/header.html')
+    <main>
+      <section class="conatact">
+        <div id="map"></div>
+        <div class="contact__container">
+            <div class="section__title">
+                <h2 class="title">Контакти</h2>
+              </div>
+            <div class="contact__info">
+                <div class="contact__item">
+                    <p>Адрес: </p>
+                    <span>м.Хмельницький, вул. Герцена 10</span>
+                </div>
+                <div class="contact__item">
+                    <p>Телефон: </p>
+                    <a href="tel:+380978596027">+380978596027</a>
+                </div>
+                <div class="contact__item">
+                    <p>Email:: </p>
+                    <a href="mailto:office@ekoalt.km.ua">office@ekoalt.km.ua</a>
+                </div>
+            </div>
+        </div>
+      </section>
+    </main>
+    @@include('html/footer.html')
+    <script src="js/main.min.js"></script>
+  </body>
+</html>

@@ -7,7 +7,7 @@ const loader = new Loader({
 });
 
 loader.load().then(() => {
-  const map = new google.maps.Map(document.getElementById("maphome"), {
+  const map = new google.maps.Map(document.getElementById("map"), {
     center: { lat: 49.43144054152188, lng: 27.011101098858056 },
     zoom: 15,
     mapId: "2686bd5387548a27",
@@ -15,7 +15,7 @@ loader.load().then(() => {
   new google.maps.Marker({
     position: { lat: 49.43144054152188, lng: 27.011101098858056 },
     map,
-    icon: "/Eco-alt/img/mapPin.png",
+    icon: "/img/mapPin.png",
   });
 });
 const menuList = document.querySelectorAll(".menu > li");
