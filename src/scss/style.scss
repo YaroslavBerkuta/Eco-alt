@@ -346,6 +346,9 @@ section {
       @include text;
     }
   }
+  .label-sale {
+    background: #f27e00;
+  }
 }
 .art {
   color: #afb1bd;
@@ -363,6 +366,7 @@ section {
   text-transform: uppercase;
 }
 .price {
+  display: inline-block;
   margin-top: 14px;
   color: #1b1b1b;
   @include Headline7;
@@ -536,7 +540,6 @@ section {
     border-radius: 103px;
     width: 90%;
     padding: 18px 0 18px 28px;
-    text-transform: uppercase;
     &::placeholder {
       font-family: "Montserrat";
       font-style: normal;
@@ -631,14 +634,19 @@ section {
   overflow: hidden;
   transition: max-height 0.3s ease-out;
 }
+.shop__bottom {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
 .shop__filter {
-  max-width: 312px;
+  width: 312px;
 }
 .shop__filter-item {
   margin-bottom: 15px;
 }
 .conatact {
-  padding-top: 0!important;
+  padding-top: 0 !important;
   position: relative;
   #map {
     position: absolute;
@@ -648,10 +656,14 @@ section {
     height: 100%;
     z-index: -1;
   }
-  .contact__container{
+  .contact__container {
     padding-top: 140px;
     padding-left: 300px;
-    background: linear-gradient(90deg,#f9f9fb 27.36%,rgba(249,249,251,0) 60.3%);
+    background: linear-gradient(
+      90deg,
+      #f9f9fb 27.36%,
+      rgba(249, 249, 251, 0) 60.3%
+    );
   }
 }
 .contact__info {
@@ -677,4 +689,42 @@ section {
     line-height: 16px;
     color: #1b1b1b;
   }
+}
+.shop__main {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 985px;
+}
+
+.size__flex {
+  margin-top: 24px;
+  display: flex;
+  align-items: flex-start;
+  button {
+    @include Description;
+    color: #1b1b1b;
+    margin-right: 6px;
+    padding: 8px 12px;
+    cursor: pointer;
+    background: rgba(175, 177, 189, 0.15);
+    border-radius: 6px;
+    font-weight: bold;
+    &.active{
+      color: #00A759;
+      background: rgba(0, 167, 89, 0.04);
+    }
+  }
+}
+.add-cart {
+  margin-top: 24px;
+  width: 100%;
+  color: #ffffff;
+  text-align: center;
+  @include buttonLabel;
+  background: #00a759;
+  border-radius: 6px;
+  padding: 14px 0;
+  cursor: url(@img/cart.svg) 2 2, pointer;
 }
