@@ -405,6 +405,13 @@ template {
   display: none;
 }
 
+input:not([type=checkbox]):not([type=radio]),
+textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
 body {
   background: #f9f9fb;
   overflow-x: hidden;
@@ -1277,6 +1284,22 @@ section {
   color: #1b1b1b;
 }
 
+.accordion svg {
+  transition: all 0.2s linear;
+}
+
+.accordion.active p {
+  color: #00a759;
+}
+
+.accordion.active svg {
+  transform: rotate(180deg);
+}
+
+.accordion.active svg path {
+  fill: #00a759;
+}
+
 .panel {
   padding: 0 18px;
   color: #212121;
@@ -1284,6 +1307,62 @@ section {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.3s ease-out;
+}
+
+.panel label {
+  color: #000000;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 16px;
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.panel label input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.panel label input:checked ~ .checkmark {
+  background-color: #00a759;
+}
+
+.panel label .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 16px;
+  width: 16px;
+  border: 1px solid #afb1bd;
+  border-radius: 2px;
+  transition: 0.2s linear;
+}
+
+.panel label .checkmark:after {
+  background-image: url(../img/cheack.svg);
+  background-size: 12px 10px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  content: "";
+}
+
+.panel label .checkmark:hover {
+  border: 1px solid #00a759;
 }
 
 .shop__bottom {
@@ -1349,11 +1428,17 @@ section {
 }
 
 .shop__main {
+  max-width: 985px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.shop__list {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
   flex-wrap: wrap;
-  max-width: 985px;
 }
 
 .size__flex {
@@ -1378,7 +1463,7 @@ section {
 }
 
 .size__flex button.active {
-  color: #00A759;
+  color: #00a759;
   background: rgba(0, 167, 89, 0.04);
 }
 
@@ -1397,4 +1482,49 @@ section {
   border-radius: 6px;
   padding: 14px 0;
   cursor: url(../img/cart.svg) 2 2, pointer;
+}
+
+.catalog__pagination {
+  margin-top: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 250px;
+}
+
+.pagination__page {
+  display: flex;
+  align-items: center;
+}
+
+.number__page {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.number__page:not(:last-child) {
+  margin-right: 15px;
+}
+
+.number__page span {
+  color: #afb1bd;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 30px;
+  letter-spacing: 0.113382px;
+}
+
+.number__page.active {
+  background: #00a759;
+}
+
+.number__page.active span {
+  color: #fff;
 }

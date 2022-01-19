@@ -624,6 +624,20 @@ section {
     @include buttonLabel;
     color: #1b1b1b;
   }
+  svg{
+    transition: all .2s linear;
+  }
+  &.active{
+    p{
+      color: #00a759;
+    }
+    svg{
+      transform:rotate(180deg);
+      path{
+        fill: #00a759;
+      }
+    }
+  }
 }
 
 .panel {
@@ -633,7 +647,51 @@ section {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.3s ease-out;
+  label {
+    color: #000000;
+    @include textBold;
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    user-select: none;
+    input {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+      height: 0;
+      width: 0;
+      &:checked ~ .checkmark {
+        background-color: #00a759;
+      }
+    }
+    .checkmark {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 16px;
+      width: 16px;
+      border: 1px solid #afb1bd;
+      border-radius: 2px;
+      transition: 0.2s linear;
+      &:after {
+        background-image: url(@img/cheack.svg);
+        background-size: 12px 10px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        content: "";
+      }
+      &:hover {
+        border: 1px solid #00a759;
+      }
+    }
+  }
 }
+
 .shop__bottom {
   display: flex;
   align-items: flex-start;
@@ -691,13 +749,17 @@ section {
   }
 }
 .shop__main {
+  max-width: 985px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.shop__list {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
   flex-wrap: wrap;
-  max-width: 985px;
 }
-
 .size__flex {
   margin-top: 24px;
   display: flex;
@@ -711,8 +773,8 @@ section {
     background: rgba(175, 177, 189, 0.15);
     border-radius: 6px;
     font-weight: bold;
-    &.active{
-      color: #00A759;
+    &.active {
+      color: #00a759;
       background: rgba(0, 167, 89, 0.04);
     }
   }
@@ -727,4 +789,37 @@ section {
   border-radius: 6px;
   padding: 14px 0;
   cursor: url(@img/cart.svg) 2 2, pointer;
+}
+.catalog__pagination {
+  margin-top: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 250px;
+}
+.pagination__page {
+  display: flex;
+  align-items: center;
+}
+.number__page {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  &:not(:last-child) {
+    margin-right: 15px;
+  }
+  span {
+    color: #afb1bd;
+    @include Headline5;
+  }
+  &.active {
+    background: #00a759;
+    span {
+      color: #fff;
+    }
+  }
 }
