@@ -12,11 +12,11 @@ get_header();
                     </div>
                     <div class="hero__media">
                         <video
-                            src=""
-                            autoplay
-                            loop
-                            muted
-                            poster="img/videoCover.png"
+                                src=""
+                                autoplay
+                                loop
+                                muted
+                                poster="img/videoCover.png"
                         ></video>
                     </div>
                 </div>
@@ -68,18 +68,14 @@ get_header();
             </div>
             <div class="brand-swiper">
                 <div class="brand-wrapper">
-                    <div class="brand-item"><img src="img/ch.png" alt="" /></div>
-                    <div class="brand-item"><img src="img/toshiba.png" alt="" /></div>
-                    <div class="brand-item"><img src="img/gree.png" alt="" /></div>
-                    <div class="brand-item"><img src="img/leberg.png" alt="" /></div>
-                    <div class="brand-item"><img src="img/midea.png" alt="" /></div>
-                    <div class="brand-item">
-                        <img src="img/mitsubishi.png" alt="" />
-                    </div>
-                    <div class="brand-item"><img src="img/neoclima.png" alt="" /></div>
-                    <div class="brand-item">
-                        <img src="img/panasonic.png" alt="" />
-                    </div>
+                    <a class="brand-item" href=""><img src="img/ch.png" alt=""/></a>
+                    <a class="brand-item" href=""><img src="img/toshiba.png" alt=""/></a>
+                    <a class="brand-item" href=""><img src="img/gree.png" alt=""/></a>
+                    <a class="brand-item" href=""><img src="img/leberg.png" alt=""/></a>
+                    <a class="brand-item" href=""><img src="img/midea.png" alt=""/></a>
+                    <a class="brand-item" href=""><img src="img/mitsubishi.png" alt=""/></a>
+                    <a class="brand-item" href=""><img src="img/neoclima.png" alt=""/></a>
+                    <a class="brand-item" href=""><img src="img/panasonic.png" alt=""/></a>
                 </div>
             </div>
         </section>
@@ -113,211 +109,74 @@ get_header();
                 </div>
                 <div class="filter__tovar">
                     <div class="swiper-wrapper">
-                        <a class="filter___cart" href="#">
-                            <div class="tovar__label">
-                                <div class="label">
-                                    <p>хіт</p>
-                                </div>
-                            </div>
-                            <div class="filter__img">
-                                <img src="img/conder.png" alt="" />
-                            </div>
-                            <div class="tovar___info">
-                                <p class="art">Арт.123</p>
-                                <h2 class="tovar__name">neoclima-skycold nordic</h2>
-                                <p class="tovar__model">ns/nu-09esniw</p>
-                                <p class="price">16499<span>грн</span></p>
-                            </div>
-                        </a>
-                        <a class="filter___cart" href="#">
-                            <div class="tovar__label">
-                                <div class="label">
-                                    <p>хіт</p>
-                                </div>
-                            </div>
-                            <div class="filter__img">
-                                <img src="img/conder.png" alt="" />
-                            </div>
-                            <div class="tovar___info">
-                                <p class="art">Арт.123</p>
-                                <h2 class="tovar__name">neoclima-skycold nordic</h2>
-                                <p class="tovar__model">ns/nu-09esniw</p>
-                                <p class="price">16499<span>грн</span></p>
-                            </div>
-                        </a>
-                        <a class="filter___cart" href="#">
-                            <div class="tovar__label">
-                                <div class="label">
-                                    <p>хіт</p>
-                                </div>
-                            </div>
-                            <div class="filter__img">
-                                <img src="img/conder.png" alt="" />
-                            </div>
-                            <div class="tovar___info">
-                                <p class="art">Арт.123</p>
-                                <h2 class="tovar__name">neoclima-skycold nordic</h2>
-                                <p class="tovar__model">ns/nu-09esniw</p>
-                                <p class="price">16499<span>грн</span></p>
-                            </div>
-                        </a>
-                        <a class="filter___cart" href="#">
-                            <div class="tovar__label">
-                                <div class="label">
-                                    <p>хіт</p>
-                                </div>
-                            </div>
-                            <div class="filter__img">
-                                <img src="img/conder.png" alt="" />
-                            </div>
-                            <div class="tovar___info">
-                                <p class="art">Арт.123</p>
-                                <h2 class="tovar__name">neoclima-skycold nordic</h2>
-                                <p class="tovar__model">ns/nu-09esniw</p>
-                                <p class="price">16499<span>грн</span></p>
-                            </div>
-                        </a>
-                        <a class="filter___cart" href="#">
-                            <div class="tovar__label">
-                                <div class="label">
-                                    <p>хіт</p>
-                                </div>
-                            </div>
-                            <div class="filter__img">
-                                <img src="img/conder.png" alt="" />
-                            </div>
-                            <div class="tovar___info">
-                                <p class="art">Арт.123</p>
-                                <h2 class="tovar__name">neoclima-skycold nordic</h2>
-                                <p class="tovar__model">ns/nu-09esniw</p>
-                                <p class="price">16499<span>грн</span></p>
-                            </div>
-                        </a>
-                        <a class="filter___cart" href="#">
-                            <div class="tovar__label">
-                                <div class="label">
-                                    <p>хіт</p>
-                                </div>
-                            </div>
-                            <div class="filter__img">
-                                <img src="img/conder.png" alt="" />
-                            </div>
-                            <div class="tovar___info">
-                                <p class="art">Арт.123</p>
-                                <h2 class="tovar__name">neoclima-skycold nordic</h2>
-                                <p class="tovar__model">ns/nu-09esniw</p>
-                                <p class="price">16499<span>грн</span></p>
-                            </div>
-                        </a>
-                        <a class="filter___cart" href="#">
-                            <div class="tovar__label">
-                                <div class="label">
-                                    <p>хіт</p>
-                                </div>
-                            </div>
-                            <div class="filter__img">
-                                <img src="img/conder.png" alt="" />
-                            </div>
-                            <div class="tovar___info">
-                                <p class="art">Арт.123</p>
-                                <h2 class="tovar__name">neoclima-skycold nordic</h2>
-                                <p class="tovar__model">ns/nu-09esniw</p>
-                                <p class="price">16499<span>грн</span></p>
-                            </div>
-                        </a>
-                        <a class="filter___cart" href="#">
-                            <div class="tovar__label">
-                                <div class="label">
-                                    <p>хіт</p>
-                                </div>
-                            </div>
-                            <div class="filter__img">
-                                <img src="img/conder.png" alt="" />
-                            </div>
-                            <div class="tovar___info">
-                                <p class="art">Арт.123</p>
-                                <h2 class="tovar__name">neoclima-skycold nordic</h2>
-                                <p class="tovar__model">ns/nu-09esniw</p>
-                                <p class="price">16499<span>грн</span></p>
-                            </div>
-                        </a>
-                        <a class="filter___cart" href="#">
-                            <div class="tovar__label">
-                                <div class="label">
-                                    <p>хіт</p>
-                                </div>
-                            </div>
-                            <div class="filter__img">
-                                <img src="img/conder.png" alt="" />
-                            </div>
-                            <div class="tovar___info">
-                                <p class="art">Арт.123</p>
-                                <h2 class="tovar__name">neoclima-skycold nordic</h2>
-                                <p class="tovar__model">ns/nu-09esniw</p>
-                                <p class="price">16499<span>грн</span></p>
-                            </div>
-                        </a>
-                        <a class="filter___cart" href="#">
-                            <div class="tovar__label">
-                                <div class="label">
-                                    <p>хіт</p>
-                                </div>
-                            </div>
-                            <div class="filter__img">
-                                <img src="img/conder.png" alt="" />
-                            </div>
-                            <div class="tovar___info">
-                                <p class="art">Арт.123</p>
-                                <h2 class="tovar__name">neoclima-skycold nordic</h2>
-                                <p class="tovar__model">ns/nu-09esniw</p>
-                                <p class="price">16499<span>грн</span></p>
-                            </div>
-                        </a>
-                        <a class="filter___cart" href="#">
-                            <div class="tovar__label">
-                                <div class="label">
-                                    <p>хіт</p>
-                                </div>
-                            </div>
-                            <div class="filter__img">
-                                <img src="img/conder.png" alt="" />
-                            </div>
-                            <div class="tovar___info">
-                                <p class="art">Арт.123</p>
-                                <h2 class="tovar__name">neoclima-skycold nordic</h2>
-                                <p class="tovar__model">ns/nu-09esniw</p>
-                                <p class="price">16499<span>грн</span></p>
-                            </div>
-                        </a>
+
+                        <?php
+                        global $product;
+                        $mypost_Query = new WP_Query(array(
+                            'post_type'        => 'product',
+                            'post_status'      => 'publish',
+                            'product_tag'=>'хіт',
+                            'posts_per_page'   => 8,
+                        ));
+
+                        if ($mypost_Query->have_posts()) {
+                            while ($mypost_Query->have_posts()) {
+                                $mypost_Query->the_post(); ?>
+
+                                <a class="filter___cart" href="<?php echo get_the_permalink(); ?>">
+                                    <div class="tovar__label">
+                                        <div class="label">
+                                            <p>хіт</p>
+                                        </div>
+                                    </div>
+                                    <div class="filter__img">
+                                        <img src="<?php $product_image_url = get_the_post_thumbnail_url($product->get_id(), 'large');
+                                        echo $product_image_url; ?>" alt=""/>
+                                    </div>
+                                    <div class="tovar___info">
+                                        <p class="art"><?php echo $product->get_sku(); ?></p>
+                                        <h2 class="tovar__name"><?php echo $product->name; ?></h2>
+                                        <p class="tovar__model">ns/nu-09esniw</p>
+                                        <p class="price"><?php echo $product->get_price();?></p>
+                                    </div>
+                                </a>
+
+                           <?php }
+                        } else {
+                            echo ('<p>Извините, нет товаров.</p>');
+                        }
+                        wp_reset_postdata();
+                        ?>
+
                     </div>
                     <div class="swiper-pagination filter__tovar-pagination"></div>
                 </div>
             </div>
             <div class="swiper-button-prev">
                 <svg
-                    width="11"
-                    height="20"
-                    viewBox="0 0 11 20"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
+                        width="11"
+                        height="20"
+                        viewBox="0 0 11 20"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
                 >
                     <path
-                        d="M2.33336 19.3333C2.02182 19.3339 1.71991 19.2254 1.48003 19.0267C1.34502 18.9147 1.23341 18.7773 1.15161 18.6221C1.06981 18.467 1.01941 18.2973 1.00331 18.1226C0.987211 17.948 1.00572 17.7719 1.05778 17.6044C1.10984 17.437 1.19442 17.2814 1.30669 17.1467L7.28003 10L1.52003 2.84C1.40927 2.70362 1.32656 2.54669 1.27666 2.37824C1.22675 2.20979 1.21062 2.03313 1.22921 1.85843C1.24779 1.68372 1.30072 1.51441 1.38495 1.36023C1.46919 1.20605 1.58306 1.07003 1.72003 0.960002C1.85798 0.83862 2.01954 0.747063 2.19455 0.691078C2.36957 0.635093 2.55427 0.615888 2.73706 0.634667C2.91985 0.653447 3.09679 0.709807 3.25676 0.800209C3.41674 0.890612 3.5563 1.01311 3.66669 1.16L10.1067 9.16C10.3028 9.39858 10.41 9.69784 10.41 10.0067C10.41 10.3155 10.3028 10.6148 10.1067 10.8533L3.44003 18.8533C3.30627 19.0147 3.13636 19.1422 2.94408 19.2256C2.7518 19.309 2.54257 19.3459 2.33336 19.3333Z"
-                        fill="#00A759"
+                            d="M2.33336 19.3333C2.02182 19.3339 1.71991 19.2254 1.48003 19.0267C1.34502 18.9147 1.23341 18.7773 1.15161 18.6221C1.06981 18.467 1.01941 18.2973 1.00331 18.1226C0.987211 17.948 1.00572 17.7719 1.05778 17.6044C1.10984 17.437 1.19442 17.2814 1.30669 17.1467L7.28003 10L1.52003 2.84C1.40927 2.70362 1.32656 2.54669 1.27666 2.37824C1.22675 2.20979 1.21062 2.03313 1.22921 1.85843C1.24779 1.68372 1.30072 1.51441 1.38495 1.36023C1.46919 1.20605 1.58306 1.07003 1.72003 0.960002C1.85798 0.83862 2.01954 0.747063 2.19455 0.691078C2.36957 0.635093 2.55427 0.615888 2.73706 0.634667C2.91985 0.653447 3.09679 0.709807 3.25676 0.800209C3.41674 0.890612 3.5563 1.01311 3.66669 1.16L10.1067 9.16C10.3028 9.39858 10.41 9.69784 10.41 10.0067C10.41 10.3155 10.3028 10.6148 10.1067 10.8533L3.44003 18.8533C3.30627 19.0147 3.13636 19.1422 2.94408 19.2256C2.7518 19.309 2.54257 19.3459 2.33336 19.3333Z"
+                            fill="#00A759"
                     />
                 </svg>
             </div>
             <div class="swiper-button-next">
                 <svg
-                    width="11"
-                    height="20"
-                    viewBox="0 0 11 20"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
+                        width="11"
+                        height="20"
+                        viewBox="0 0 11 20"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
                 >
                     <path
-                        d="M2.33336 19.3333C2.02182 19.3339 1.71991 19.2254 1.48003 19.0267C1.34502 18.9147 1.23341 18.7773 1.15161 18.6221C1.06981 18.467 1.01941 18.2973 1.00331 18.1226C0.987211 17.948 1.00572 17.7719 1.05778 17.6044C1.10984 17.437 1.19442 17.2814 1.30669 17.1467L7.28003 10L1.52003 2.84C1.40927 2.70362 1.32656 2.54669 1.27666 2.37824C1.22675 2.20979 1.21062 2.03313 1.22921 1.85843C1.24779 1.68372 1.30072 1.51441 1.38495 1.36023C1.46919 1.20605 1.58306 1.07003 1.72003 0.960002C1.85798 0.83862 2.01954 0.747063 2.19455 0.691078C2.36957 0.635093 2.55427 0.615888 2.73706 0.634667C2.91985 0.653447 3.09679 0.709807 3.25676 0.800209C3.41674 0.890612 3.5563 1.01311 3.66669 1.16L10.1067 9.16C10.3028 9.39858 10.41 9.69784 10.41 10.0067C10.41 10.3155 10.3028 10.6148 10.1067 10.8533L3.44003 18.8533C3.30627 19.0147 3.13636 19.1422 2.94408 19.2256C2.7518 19.309 2.54257 19.3459 2.33336 19.3333Z"
-                        fill="#00A759"
+                            d="M2.33336 19.3333C2.02182 19.3339 1.71991 19.2254 1.48003 19.0267C1.34502 18.9147 1.23341 18.7773 1.15161 18.6221C1.06981 18.467 1.01941 18.2973 1.00331 18.1226C0.987211 17.948 1.00572 17.7719 1.05778 17.6044C1.10984 17.437 1.19442 17.2814 1.30669 17.1467L7.28003 10L1.52003 2.84C1.40927 2.70362 1.32656 2.54669 1.27666 2.37824C1.22675 2.20979 1.21062 2.03313 1.22921 1.85843C1.24779 1.68372 1.30072 1.51441 1.38495 1.36023C1.46919 1.20605 1.58306 1.07003 1.72003 0.960002C1.85798 0.83862 2.01954 0.747063 2.19455 0.691078C2.36957 0.635093 2.55427 0.615888 2.73706 0.634667C2.91985 0.653447 3.09679 0.709807 3.25676 0.800209C3.41674 0.890612 3.5563 1.01311 3.66669 1.16L10.1067 9.16C10.3028 9.39858 10.41 9.69784 10.41 10.0067C10.41 10.3155 10.3028 10.6148 10.1067 10.8533L3.44003 18.8533C3.30627 19.0147 3.13636 19.1422 2.94408 19.2256C2.7518 19.309 2.54257 19.3459 2.33336 19.3333Z"
+                            fill="#00A759"
                     />
                 </svg>
             </div>

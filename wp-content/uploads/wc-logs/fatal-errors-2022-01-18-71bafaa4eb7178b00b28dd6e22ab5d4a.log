@@ -1,0 +1,12 @@
+2022-01-18T11:38:06+00:00 CRITICAL syntax error, unexpected '?>' in C:\MAMP\htdocs\Eco-alt\wp-content\themes\eco-alt\header.php on line 111
+
+2022-01-18T11:38:08+00:00 CRITICAL syntax error, unexpected '?>' in C:\MAMP\htdocs\Eco-alt\wp-content\themes\eco-alt\header.php on line 111
+
+2022-01-18T11:38:33+00:00 CRITICAL syntax error, unexpected '?>' in C:\MAMP\htdocs\Eco-alt\wp-content\themes\eco-alt\header.php on line 111
+
+2022-01-18T11:40:14+00:00 CRITICAL syntax error, unexpected end of file in C:\MAMP\htdocs\Eco-alt\wp-content\themes\eco-alt\header.php on line 125
+
+2022-01-18T11:40:18+00:00 CRITICAL syntax error, unexpected end of file in C:\MAMP\htdocs\Eco-alt\wp-content\themes\eco-alt\header.php on line 125
+
+2022-01-18T11:50:26+00:00 CRITICAL syntax error, unexpected 'print_r' (T_STRING), expecting ';' in C:\MAMP\htdocs\Eco-alt\wp-content\themes\eco-alt\header.php on line 115
+

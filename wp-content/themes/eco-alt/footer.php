@@ -15,20 +15,19 @@
     <div class="container">
         <div class="footer__flex">
             <div class="footer__item">
-                <ul>
-                    <li><a href="">Каталог</a></li>
-                    <li><a href="">Послуги</a></li>
-                    <li><a href="">Об'єкти</a></li>
-                    <li><a href="">Контакти</a></li>
-                    <li><a href="">Про нас</a></li>
-                </ul>
+                <?php
+                wp_nav_menu( [
+                    'menu'            => 'footer_menu',
+                    'container'       => false,
+                ] );
+                ?>
             </div>
             <div class="footer__item">
                 <ul>
-                    <li><img src="img/masterCart.svg" alt=""></li>
-                    <li><img src="img/visa.svg" alt=""></li>
-                    <li><img src="img/gpay.svg" alt=""></li>
-                    <li><img src="img/applePay.svg" alt=""></li>
+                    <li><img src="<? echo get_template_directory_uri().'/assets/img/masterCart.svg'?>" alt=""></li>
+                    <li><img src="<? echo get_template_directory_uri().'/assets/img/visa.svg'?>" alt=""></li>
+                    <li><img src="<? echo get_template_directory_uri().'/assets/img/gpay.svg'?>" alt=""></li>
+                    <li><img src="<? echo get_template_directory_uri().'/assets/img/applePay.svg'?>" alt=""></li>
                 </ul>
             </div>
         </div>
@@ -43,6 +42,6 @@
         </div>
     </div>
 </footer>
-<script src="js/main.min.js?_v=20220117155756"></script>
+<?php wp_footer(); ?>
 </body>
 </html>
