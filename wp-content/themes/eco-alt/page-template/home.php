@@ -83,28 +83,24 @@ get_header();
             <div class="container">
                 <div class="section__title">
                     <h2 class="title">Каталог</h2>
-                    <a href="">Всі</a>
+                    <a href="Каталог">Всі</a>
                 </div>
                 <div class="filter__catalog">
                     <div class="filter__flex">
-                        <div class="filter__item">
-                            <button>Побутові кондиціонери</button>
-                        </div>
-                        <div class="filter__item">
-                            <button>Напівпромислові кондиціонери</button>
-                        </div>
-                        <div class="filter__item">
-                            <button>Інверторні кондиціонери</button>
-                        </div>
-                        <div class="filter__item">
-                            <button>Неінверторні кондиціонери</button>
-                        </div>
-                        <div class="filter__item">
-                            <button>Керамічні панелі</button>
-                        </div>
-                        <div class="filter__item">
-                            <button>Конвекційні обігрівачі</button>
-                        </div>
+
+                        <?php
+                        $args = array(
+                            'taxonomy' => 'product_cat', # таксономия - категории товаро
+                        );
+
+                        $product_categories = get_terms($args);
+                        foreach ($product_categories as $product_category) {
+                            ?>
+                            <div class="filter__item">
+                                <button><?php echo $product_category->name; ?></button>
+                            </div>
+                        <?php } ?>
+
                     </div>
                 </div>
                 <div class="filter__tovar">
@@ -116,7 +112,6 @@ get_header();
                             'post_type'        => 'product',
                             'post_status'      => 'publish',
                             'product_tag'=>'хіт',
-                            'posts_per_page'   => 8,
                         ));
 
                         if ($mypost_Query->have_posts()) {
@@ -136,7 +131,7 @@ get_header();
                                     <div class="tovar___info">
                                         <p class="art"><?php echo $product->get_sku(); ?></p>
                                         <h2 class="tovar__name"><?php echo $product->name; ?></h2>
-                                        <p class="tovar__model">ns/nu-09esniw</p>
+                                        <p class="tovar__model"><?php echo $product->get_attribute('model'); ?></p>
                                         <p class="price"><?php echo $product->get_price();?></p>
                                     </div>
                                 </a>

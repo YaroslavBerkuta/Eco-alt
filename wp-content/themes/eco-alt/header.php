@@ -37,7 +37,7 @@
     <div class="container">
         <div class="header__flex">
             <div class="header__logo">
-                <a href="<? echo home_url(); ?>"><img src="<?php echo get_template_directory_uri()."/assets/img/logo.svg" ?>" alt="logo" /></a>
+                <a href="<?php echo home_url(); ?>"><img src="<?php echo get_template_directory_uri()."/assets/img/logo.svg" ?>" alt="logo" /></a>
             </div>
             <nav class="header__menu">
                 <?php
@@ -50,10 +50,10 @@
 
             </nav>
             <div class="header__contact">
-                <a href="tel:+380978596027">+380 97 859 6027</a>
+                <a href="tel:+<?php the_field('phone'); ?>">+<?php the_field('phone'); ?></a>
             </div>
             <div class="heaedr__cart">
-                <a href="<? echo esc_url(wc_get_cart_url()); ?> " class="cart">
+                <a href="<?php echo esc_url(wc_get_cart_url()); ?> " class="cart">
                     <img src="<?php echo  get_template_directory_uri().'/assets/img/cart.svg' ?>" alt="" />
                 </a>
                 <?php

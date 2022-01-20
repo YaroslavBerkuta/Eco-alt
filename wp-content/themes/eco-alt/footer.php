@@ -34,9 +34,9 @@
         <div class="footer__flex">
             <div class="footer__item">
                 <ul>
-                    <li>м.Хмельницький, вул. Герцена 10</li>
-                    <li><a href="tel:+380978596027">+380978596027</a></li>
-                    <li><a href="mailto:office@ekoalt.km.ua">office@ekoalt.km.ua</a></li>
+                    <li><?php the_field('address'); ?></li>
+                    <li><a href="tel:+<?php the_field('phone'); ?>">+<?php the_field('phone'); ?></a></li>
+                    <li><a href="mailto:<?php the_field('e_mail'); ?>"><?php the_field('e_mail'); ?></a></li>
                 </ul>
             </div>
         </div>
