@@ -1,5 +1,6 @@
 import * as flsFunctions from "./modules/function.js";
 import Swiper, { Pagination, Grid, Navigation } from "swiper";
+import $ from "jquery";
 import { Loader } from "@googlemaps/js-api-loader";
 flsFunctions.isWebp();
 const loader = new Loader({
@@ -63,9 +64,9 @@ filterItem.forEach((item) => {
 });
 
 const filterTovar = new Swiper(".filter__tovar", {
-  slideClass: "filter___cart",
+  slideClass: "filter__cart",
   slidesPerView: 4,
-  spaceBetween: 20,
+  spaceBetween: 18,
   modules: [Grid, Navigation, Pagination],
   grid: {
     rows: 2,
@@ -79,6 +80,7 @@ const filterTovar = new Swiper(".filter__tovar", {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
+  setWrapperSize: true,
 });
 
 var acc = document.getElementsByClassName("accordion");
@@ -149,6 +151,19 @@ const gallerySwiper = new Swiper(".product__gallery", {
   navigation: {
     nextEl: ".product__gallery-next",
     prevEl: ".product__gallery-prev",
-    disabledClass:"product__gallery-disable"
+    disabledClass: "product__gallery-disable",
   },
+});
+
+$(".filter__item").click(function () {
+  let category = $(this).attr("data-filter-category-id");
+  let products = $(".filter__cart");
+  products.each(function () {
+    let categories = $(this).attr("data-category-id").split(";");
+    if (categories.includes(category)) {
+      $(this).show();
+    } else {
+      $(this).hide();
+    }
+  });
 });
