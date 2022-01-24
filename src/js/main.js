@@ -155,15 +155,22 @@ const gallerySwiper = new Swiper(".product__gallery", {
   },
 });
 
-$(".filter__item").click(function () {
-  let category = $(this).attr("data-filter-category-id");
-  let products = $(".filter__cart");
-  products.each(function () {
-    let categories = $(this).attr("data-category-id").split(";");
-    if (categories.includes(category)) {
-      $(this).show();
-    } else {
-      $(this).hide();
-    }
-  });
+
+
+const objectSlider = new Swiper(".object__flex", {
+  slideClass: "object__item",
+  slidesPerView: 4,
+  grid: {
+    rows: 3,
+    fill: "row",
+  },
+  modules: [Grid, Navigation, Pagination],
+  navigation: {
+    nextEl: ".object-button-next",
+    prevEl: ".object-button-prev",
+  },
+  pagination: {
+    el: ".object-pagination",
+    type: "fraction",
+  },
 });

@@ -319,7 +319,6 @@ section {
   .swiper-wrapper {
     display: flex;
     margin-bottom: 50px;
-    width: 100%!important;
   }
 }
 .filter__cart {
@@ -329,6 +328,7 @@ section {
   margin-bottom: 32px;
   margin-top: 0 !important;
   padding: 12px 12px 24px 12px;
+  position: relative;
 }
 .filter__img {
   display: flex;
@@ -337,6 +337,9 @@ section {
 }
 .tovar__label {
   display: flex;
+  position: absolute;
+  top: 3%;
+  left: 5%;
   .label {
     width: 60px;
     height: 60px;
@@ -529,9 +532,6 @@ section {
       @include buttonLabel;
       &:not(:last-child) {
         margin-right: 48px;
-      }
-      img {
-        filter: grayscale(1);
       }
       a {
         color: #1b1b1b;
@@ -1096,8 +1096,8 @@ input[type="range"]::-webkit-slider-thumb {
   border-radius: 6px;
   flex: 1 0 100%;
   margin-bottom: 32px;
-  &:nth-child(4n){
-    max-width:100%;
+  &:nth-child(4n) {
+    max-width: 100%;
   }
 }
 .service__link {
@@ -1136,10 +1136,82 @@ input[type="range"]::-webkit-slider-thumb {
   align-items: center;
   justify-content: center;
 }
-.service__flex{
+.service__flex {
   margin-top: 32px;
   display: flex;
   align-items: flex-start;
   flex-wrap: wrap;
   justify-content: space-between;
+}
+.object__item {
+  max-width: 312px;
+  max-height: 312px;
+  border-radius: 6px;
+  margin-bottom: 24px;
+  img {
+    border-radius: 6px;
+    width: 100%;
+    height: 100%;
+  }
+}
+.object__flex {
+  overflow: hidden;
+  .swiper-wrapper {
+    justify-content: space-between;
+  }
+}
+.object__controls {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  .swiper-button-disabled {
+    background: #e6e6eb;
+  }
+}
+.object-pagination {
+  display: inline-flex;
+  width: auto;
+  align-items: center;
+  justify-content: center;
+  margin: 0 24px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 30px;
+  color: #afb1bd;
+  user-select: none;
+  .swiper-pagination-current {
+    color: #1b1b1b;
+  }
+}
+.object-button-prev {
+  transform: rotate(180deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  background: #1b1b1b;
+  border-radius: 50%;
+  svg {
+    path {
+      fill: #fff;
+    }
+  }
+}
+.object-button-next {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  background: #1b1b1b;
+  border-radius: 50%;
+  svg {
+    path {
+      fill: #fff;
+    }
+  }
 }

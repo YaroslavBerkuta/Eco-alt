@@ -865,7 +865,6 @@ section {
 .filter__tovar .swiper-wrapper {
   display: flex;
   margin-bottom: 50px;
-  width: 100% !important;
 }
 
 .filter__cart {
@@ -875,6 +874,7 @@ section {
   margin-bottom: 32px;
   margin-top: 0 !important;
   padding: 12px 12px 24px 12px;
+  position: relative;
 }
 
 .filter__img {
@@ -885,6 +885,9 @@ section {
 
 .tovar__label {
   display: flex;
+  position: absolute;
+  top: 3%;
+  left: 5%;
 }
 
 .tovar__label .label {
@@ -1156,10 +1159,6 @@ section {
 
 .footer__item ul li:not(:last-child) {
   margin-right: 48px;
-}
-
-.footer__item ul li img {
-  filter: grayscale(1);
 }
 
 .footer__item ul li a {
@@ -1919,4 +1918,87 @@ input[type=range]::-webkit-slider-thumb {
   align-items: flex-start;
   flex-wrap: wrap;
   justify-content: space-between;
+}
+
+.object__item {
+  max-width: 312px;
+  max-height: 312px;
+  border-radius: 6px;
+  margin-bottom: 24px;
+}
+
+.object__item img {
+  border-radius: 6px;
+  width: 100%;
+  height: 100%;
+}
+
+.object__flex {
+  overflow: hidden;
+}
+
+.object__flex .swiper-wrapper {
+  justify-content: space-between;
+}
+
+.object__controls {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.object__controls .swiper-button-disabled {
+  background: #e6e6eb;
+}
+
+.object-pagination {
+  display: inline-flex;
+  width: auto;
+  align-items: center;
+  justify-content: center;
+  margin: 0 24px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 30px;
+  color: #afb1bd;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.object-pagination .swiper-pagination-current {
+  color: #1b1b1b;
+}
+
+.object-button-prev {
+  transform: rotate(180deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  background: #1b1b1b;
+  border-radius: 50%;
+}
+
+.object-button-prev svg path {
+  fill: #fff;
+}
+
+.object-button-next {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  background: #1b1b1b;
+  border-radius: 50%;
+}
+
+.object-button-next svg path {
+  fill: #fff;
 }
