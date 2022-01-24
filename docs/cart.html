@@ -15,7 +15,7 @@
     href="https://unpkg.com/swiper@7/swiper-bundle.min.css?_v=20220124163731"
   />
   <link rel="stylesheet" href="css/style.min.css?_v=20220124163731" />
-  <title>Home</title>
+  <title>Cart</title>
 </head>
 
   <body>
@@ -67,26 +67,77 @@
   </div>
 </header>
 
-    <main>
-      <section class="conatact">
-        <div id="map"></div>
-        <div class="contact__container">
+    <main class="main">
+      <section>
+        <div class="container">
           <div class="section__title">
-            <h2 class="title">Контакти</h2>
+            <h2 class="title">Корзина</h2>
           </div>
-          <div class="contact__info">
-            <div class="contact__item">
-              <p>Адрес:</p>
-              <span>м.Хмельницький, вул. Герцена 10</span>
+        </div>
+      </section>
+      <section>
+        <div class="container">
+          <div class="cart__flex">
+            <div class="cart__list">
+              <div class="cart__item">
+                <div class="cart__img">
+                  <img src="img/conder.png" alt="" />
+                </div>
+                <div class="cart__info">
+                    <div class="cart__brand">
+                        <h2>NEOCLIMA – SKYCOLD NORDIC </h2>
+                        <p>₴16499</p>
+                    </div>
+                    <div class="cart__model">
+                        <p>NS/NU-09ESNIW</p>
+                    </div>
+                    <div class="cart__size">
+                        <span>Площа:</span><p>25м²</p>
+                    </div>
+                    <div class="cart__btn">
+                        <button><img src="img/minus-circle.svg" alt=""></button>
+                        <div class="cart__count-item"><span>1</span></div>
+                        <button><img src="img/plus-circle-outline.svg" alt=""></button>
+                    </div>
+                    <button class="remove__item"><img src="img/trash.svg" alt=""></button>
+                </div>
+              </div>
+              <div class="cart__item">
+                <div class="cart__img">
+                  <img src="img/conder.png" alt="" />
+                </div>
+                <div class="cart__info">
+                    <div class="cart__brand">
+                        <h2>NEOCLIMA – SKYCOLD NORDIC </h2>
+                        <p>₴16499</p>
+                    </div>
+                    <div class="cart__model">
+                        <p>NS/NU-09ESNIW</p>
+                    </div>
+                    <div class="cart__size">
+                        <span>Площа:</span><p>25м²</p>
+                    </div>
+                    <div class="cart__btn">
+                        <button><img src="img/minus-circle.svg" alt=""></button>
+                        <div class="cart__count-item"><span>1</span></div>
+                        <button><img src="img/plus-circle-outline.svg" alt=""></button>
+                    </div>
+                    <button class="remove__item"><img src="img/trash.svg" alt=""></button>
+                </div>
             </div>
-            <div class="contact__item">
-              <p>Телефон:</p>
-              <a href="tel:+380978596027">+380978596027</a>
-            </div>
-            <div class="contact__item">
-              <p>Email::</p>
-              <a href="mailto:office@ekoalt.km.ua">office@ekoalt.km.ua</a>
-            </div>
+          </div>
+          <div class="cart__total">
+              <h3>Ваше замовлення</h3>
+              <div class="cart__total-price">
+                  <span>Всього</span>
+                  <p>₴32998</p>
+              </div>
+              <div class="cart__total-description">
+                  <p>Після підтвердження замовлення наш менеджер зв'яжеться з вами найближчим часом для уточнення деталей</p>
+              </div>
+              <div class="cart__total-btn">
+                  <a href=""><span>Підтвердити замовлення</span><img src="img/arrow-next.svg" alt=""></a>
+              </div>
           </div>
         </div>
       </section>
