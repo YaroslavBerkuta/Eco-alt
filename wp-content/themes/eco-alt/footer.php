@@ -24,10 +24,10 @@
             </div>
             <div class="footer__item">
                 <ul>
-                    <li><img src="<? echo get_template_directory_uri().'/assets/img/masterCart.svg'?>" alt=""></li>
-                    <li><img src="<? echo get_template_directory_uri().'/assets/img/visa.svg'?>" alt=""></li>
-                    <li><img src="<? echo get_template_directory_uri().'/assets/img/gpay.svg'?>" alt=""></li>
-                    <li><img src="<? echo get_template_directory_uri().'/assets/img/applePay.svg'?>" alt=""></li>
+                    <li><img src="<?php echo get_template_directory_uri().'/assets/img/masterCart.svg'?>" alt=""></li>
+                    <li><img src="<?php echo get_template_directory_uri().'/assets/img/visa.svg'?>" alt=""></li>
+                    <li><img src="<?php echo get_template_directory_uri().'/assets/img/gpay.svg'?>" alt=""></li>
+                    <li><img src="<?php echo get_template_directory_uri().'/assets/img/applePay.svg'?>" alt=""></li>
                 </ul>
             </div>
         </div>

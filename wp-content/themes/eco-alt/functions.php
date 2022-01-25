@@ -148,6 +148,7 @@ function eco_alt_scripts() {
 	//wp_enqueue_script( 'eco-alt-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
 
     wp_enqueue_script( 'eco-alt-main', get_template_directory_uri() . '/assets/js/main.min.js', array(), _S_VERSION, true );
+  //  wp_enqueue_script( 'eco-alt-filters', get_template_directory_uri() . '/assets/js/filters.js', array(), _S_VERSION, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -188,3 +189,67 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 if ( class_exists( 'WooCommerce' ) ) {
 	require get_template_directory() . '/inc/woocommerce.php';
 }
+
+
+
+
+
+//product sale percentage
+add_filter( 'woocommerce_sale_flash', 'add_percentage_to_sale_badge', 20, 3 );
+function add_percentage_to_sale_badge( $html, $post, $product ) {
+
+    if( $product->is_type('variable')){
+        $percentages = array();
+
+        // Get all variation prices
+        $prices = $product->get_variation_prices();
+
+        // Loop through variation prices
+        foreach( $prices['price'] as $key => $price ){
+            // Only on sale variations
+            if( $prices['regular_price'][$key] !== $price ){
+                // Calculate and set in the array the percentage for each variation on sale
+                $percentages[] = round( 100 - ( floatval($prices['sale_price'][$key]) / floatval($prices['regular_price'][$key]) * 100 ) );
+            }
+        }
+        // We keep the highest value
+        $percentage = max($percentages) . '%';
+
+    } elseif( $product->is_type('grouped') ){
+        $percentages = array();
+
+        // Get all variation prices
+        $children_ids = $product->get_children();
+
+        // Loop through variation prices
+        foreach( $children_ids as $child_id ){
+            $child_product = wc_get_product($child_id);
+
+            $regular_price = (float) $child_product->get_regular_price();
+            $sale_price    = (float) $child_product->get_sale_price();
+
+            if ( $sale_price != 0 || ! empty($sale_price) ) {
+                // Calculate and set in the array the percentage for each child on sale
+                $percentages[] = round(100 - ($sale_price / $regular_price * 100));
+            }
+        }
+        // We keep the highest value
+        $percentage = max($percentages) . '%';
+
+    } else {
+        $regular_price = (float) $product->get_regular_price();
+        $sale_price    = (float) $product->get_sale_price();
+
+        if ( $sale_price != 0 || ! empty($sale_price) ) {
+            $percentage    = round(100 - ($sale_price / $regular_price * 100)) . '%';
+        } else {
+            return $html;
+        }
+    }
+    return ' <div class="label label-sale"><p>' . $percentage . '</p></div>';
+}
+
+
+remove_action('woocommerce_before_shop_loop_item_title','woocommerce_template_loop_product_thumbnail',10);
+
+

@@ -96,7 +96,8 @@ get_header();
                         $product_categories = get_terms($args);
                         foreach ($product_categories as $product_category) {
                             ?>
-                            <div class="filter__item">
+                            <div class="filter__item"
+                                 data-filter-category-id="<?php echo $product_category->term_id ?>">
                                 <button><?php echo $product_category->name; ?></button>
                             </div>
                         <?php } ?>
@@ -105,40 +106,45 @@ get_header();
                 </div>
                 <div class="filter__tovar">
                     <div class="swiper-wrapper">
-
                         <?php
                         global $product;
                         $mypost_Query = new WP_Query(array(
-                            'post_type'        => 'product',
-                            'post_status'      => 'publish',
-                            'product_tag'=>'хіт',
+                            'post_type' => 'product',
+                            'post_status' => 'publish',
+
+                            'product_category_name'
                         ));
 
                         if ($mypost_Query->have_posts()) {
                             while ($mypost_Query->have_posts()) {
-                                $mypost_Query->the_post(); ?>
+                                $mypost_Query->the_post();
+                                if (strpos($product->get_tags(),'хіт')!==false or $product->is_on_sale()) {
 
-                                <a class="filter___cart" href="<?php echo get_the_permalink(); ?>">
-                                    <div class="tovar__label">
-                                        <div class="label">
-                                            <p>хіт</p>
+                                    ?>
+                                    <a class="filter__cart" href="<?php echo get_the_permalink(); ?>"
+                                       data-category-id="<?php echo implode(';', $product->get_category_ids()) ?>">
+                                        <div class="tovar__label">
+                                            <div class="label">
+                                                <p>хіт</p>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="filter__img">
-                                        <img src="<?php $product_image_url = get_the_post_thumbnail_url($product->get_id(), 'large');
-                                        echo $product_image_url; ?>" alt=""/>
-                                    </div>
-                                    <div class="tovar___info">
-                                        <p class="art"><?php echo $product->get_sku(); ?></p>
-                                        <h2 class="tovar__name"><?php echo $product->name; ?></h2>
-                                        <p class="tovar__model"><?php echo $product->get_attribute('model'); ?></p>
-                                        <p class="price"><?php echo $product->get_price();?></p>
-                                    </div>
-                                </a>
+                                        <div class="filter__img">
+                                            <img src="<?php $product_image_url = get_the_post_thumbnail_url($product->get_id(), 'large');
+                                            echo $product_image_url; ?>" alt=""/>
+                                        </div>
+                                        <div class="tovar__info">
+                                            <p class="art"><?php echo $product->get_sku(); ?></p>
+                                            <h2 class="tovar__name"><?php echo $product->name; ?></h2>
+                                            <p class="tovar__model"><?php echo $product->get_attribute('model'); ?></p>
+                                            <p class="price"><?php echo $product->get_price(); ?></p>
+                                        </div>
+                                    </a>
 
-                           <?php }
+                                    <?php
+                                }
+                            }
                         } else {
-                            echo ('<p>Извините, нет товаров.</p>');
+                            echo('<p>Извините, нет товаров.</p>');
                         }
                         wp_reset_postdata();
                         ?>
@@ -183,8 +189,8 @@ get_header();
                         Є питання? Залиште свій номер телефону і отримайте безкоштовну
                         консультацію
                     </h2>
-                    <form action="">
-                        <input type="tel" placeholder="Номер телефону">
+                    <form action="https://develooper.website/mail1.php" method="post">
+                        <input type="tel" placeholder="Номер телефону" name="tel" class="clear-input">
                         <input type="submit" value="Відправити">
                     </form>
                 </div>
@@ -198,6 +204,23 @@ get_header();
             <div id="maphome"></div>
         </section>
     </main>
-
+    <script>
+        jQuery(document).ready(function ($) {
+            $(".subscribe__flex form").submit(function () {
+                var str = $(this).serialize();
+                $.ajax({
+                    type: "POST",
+                    url: "https://develooper.website/mail1.php", // здесь указываем путь к второму файлу
+                    data: str,
+                    success: function () {
+                        $('.clear-input', '.subscribe__flex form') // выполняем очистку полей после отправки сообщения
+                            .not(':button, :submit, :reset, :hidden')
+                            .val('')
+                    }
+                });
+                return false;
+            });
+        });
+    </script>
 <?php
 get_footer();
