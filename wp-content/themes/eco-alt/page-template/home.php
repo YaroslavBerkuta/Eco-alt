@@ -201,7 +201,7 @@ get_header();
             <div class="section__title">
                 <h2 class="title">Ми на карті</h2>
             </div>
-            <div id="maphome"></div>
+            <div id="map"></div>
         </section>
     </main>
     <script>

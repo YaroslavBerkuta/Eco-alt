@@ -31,12 +31,15 @@ $product_image_url = get_the_post_thumbnail_url($product->get_id(), 'large');//�
         <p class="price"><?php echo $product->get_price(); ?></p>
         <div class="size__flex">
             <?php // Получаем вариации, если они есть у товара
-            if ($product->is_type('variable')) { # вариативный товар ?>
+            if ($product->is_type('variable')) { # вариативный товар \
+                ?>
 
             <?php } else { # НЕ вариативный товар ?>
 
            <?php } ?>
         </div>
-        <a href="/cart/?add-to-cart=<?php the_ID(); ?>"><button class="add-cart">В корзину</button></a>
+        <form class="cart" action="<?php echo esc_url($product->add_to_cart_url()); ?>" method="post" enctype="multipart/form-data">
+            <button class="add-cart" data-id="<?php the_ID(); ?>" type="submit">В корзину</button>
+        </form>
     </div>
 </div>

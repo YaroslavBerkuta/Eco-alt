@@ -1,0 +1,22 @@
+2022-01-25T15:40:19+00:00 CRITICAL Uncaught Error: Call to a member function add_to_cart_url() on array in C:\xampp\htdocs\Eco-alt\wp-content\themes\eco-alt\woocommerce\content-product.php:42
+Stack trace:
+#0 C:\xampp\htdocs\Eco-alt\wp-includes\template.php(772): require()
+#1 C:\xampp\htdocs\Eco-alt\wp-content\plugins\woocommerce\includes\wc-core-functions.php(284): load_template('C:\\xampp\\htdocs...', false)
+#2 C:\xampp\htdocs\Eco-alt\wp-content\themes\eco-alt\woocommerce\archive-product.php(254): wc_get_template_part('content', 'product')
+#3 C:\xampp\htdocs\Eco-alt\wp-includes\template-loader.php(106): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\Eco-alt\wp-blog-header.php(19): require_once('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\Eco-alt\index.php(17): require('C:\\xampp\\htdocs...')
+#6 {main}
+  thrown in C:\xampp\htdocs\Eco-alt\wp-content\themes\eco-alt\woocommerce\content-product.php on line 42
+
+2022-01-25T15:40:52+00:00 CRITICAL Uncaught Error: Call to a member function add_to_cart_url() on array in C:\xampp\htdocs\Eco-alt\wp-content\themes\eco-alt\woocommerce\content-product.php:42
+Stack trace:
+#0 C:\xampp\htdocs\Eco-alt\wp-includes\template.php(772): require()
+#1 C:\xampp\htdocs\Eco-alt\wp-content\plugins\woocommerce\includes\wc-core-functions.php(284): load_template('C:\\xampp\\htdocs...', false)
+#2 C:\xampp\htdocs\Eco-alt\wp-content\themes\eco-alt\woocommerce\archive-product.php(254): wc_get_template_part('content', 'product')
+#3 C:\xampp\htdocs\Eco-alt\wp-includes\template-loader.php(106): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\Eco-alt\wp-blog-header.php(19): require_once('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\Eco-alt\index.php(17): require('C:\\xampp\\htdocs...')
+#6 {main}
+  thrown in C:\xampp\htdocs\Eco-alt\wp-content\themes\eco-alt\woocommerce\content-product.php on line 42
+
