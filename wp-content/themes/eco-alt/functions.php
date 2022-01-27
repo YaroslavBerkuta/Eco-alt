@@ -255,3 +255,16 @@ remove_action('woocommerce_before_shop_loop_item_title','woocommerce_template_lo
 remove_action('woocommerce_before_shop_loop','woocommerce_output_all_notices',10);
 
 
+//повторне додавання товару в кошик при обнові сторінки
+add_action('add_to_cart_redirect', 'resolve_dupes_add_to_cart_redirect');
+
+function resolve_dupes_add_to_cart_redirect($url = false) {
+
+    // Если другой плагин опередит нас, дайте ему возможность использовать URL.
+    if(!empty($url)) { return $url; }
+
+    // Перенаправление обратно на исходную страницу без параметра «добавить в корзину».
+    // Мы добавляем часть «get_bloginfo», чтобы она сохраняла перенаправление на сайты https://.
+    return get_bloginfo('wpurl').add_query_arg(array(), remove_query_arg('add-to-cart'));
+
+}
