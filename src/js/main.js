@@ -1,24 +1,28 @@
 import * as flsFunctions from "./modules/function.js";
 import Swiper, { Pagination, Grid, Navigation } from "swiper";
 import $ from "jquery";
+import "payment";
 import { Loader } from "@googlemaps/js-api-loader";
+import Payment from "payment";
 flsFunctions.isWebp();
 const loader = new Loader({
   apiKey: "AIzaSyBQDEs_7l7DkIcUkxfuDYexdljxizTfdZM",
 });
+if (document.getElementById("map")) {
+  loader.load().then(() => {
+    const map = new google.maps.Map(document.getElementById("map"), {
+      center: { lat: 49.43144054152188, lng: 27.011101098858056 },
+      zoom: 15,
+      mapId: "2686bd5387548a27",
+    });
+    new google.maps.Marker({
+      position: { lat: 49.43144054152188, lng: 27.011101098858056 },
+      map,
+      icon: "/img/mapPin.png",
+    });
+  });
+}
 
-loader.load().then(() => {
-  const map = new google.maps.Map(document.getElementById("map"), {
-    center: { lat: 49.43144054152188, lng: 27.011101098858056 },
-    zoom: 15,
-    mapId: "2686bd5387548a27",
-  });
-  new google.maps.Marker({
-    position: { lat: 49.43144054152188, lng: 27.011101098858056 },
-    map,
-    icon: "/img/mapPin.png",
-  });
-});
 const menuList = document.querySelectorAll(".menu > li");
 const submenu = document.querySelectorAll(".sub-menu");
 menuList.forEach((item) => {
@@ -155,8 +159,6 @@ const gallerySwiper = new Swiper(".product__gallery", {
   },
 });
 
-
-
 const objectSlider = new Swiper(".object__flex", {
   slideClass: "object__item",
   slidesPerView: 4,
@@ -174,3 +176,43 @@ const objectSlider = new Swiper(".object__flex", {
     type: "fraction",
   },
 });
+if (document.querySelector(".cart__contact-delivery")) {
+  Payment.formatCardNumber(document.querySelector(".pay__cart #catNumber"));
+  Payment.formatCardCVC(document.querySelector(".pay__cart #cartCvv"));
+  Payment.formatCardExpiry(document.querySelector(".pay__cart #cartExpires"));
+
+  const deliveryMethod = document.querySelectorAll(".delivery__change input");
+  const deliveryData = document.querySelector(".delivery__service");
+  deliveryMethod.forEach((item) => {
+    item.addEventListener("change", () => {
+      deliveryMethod.forEach((method) => {
+        method.addEventListener("change", () => {
+          if(method.id != "deliveryService"){
+            deliveryData.classList.remove("active");
+          }
+        });
+      });
+      if (item.id == "deliveryService") {
+        deliveryData.classList.add("active");
+      }
+    });
+  });
+
+
+  const payMethod = document.querySelectorAll(".pay__change input");
+  const payData = document.querySelector(".pay__cart");
+  payMethod.forEach((item) => {
+    item.addEventListener("change", () => {
+      payMethod.forEach((method) => {
+        method.addEventListener("change", () => {
+          if(method.id != "cartData"){
+            payData.classList.remove("active");
+          }
+        });
+      });
+      if (item.id == "cartData") {
+        payData.classList.add("active");
+      }
+    });
+  });
+}

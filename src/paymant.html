@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  @@include('html/head.html',{ "title": "Home" })
+  <body>
+    @@include('html/header.html')
+    <main>
+      <section>
+        <div class="container">
+          <div class="section__title">
+            <h2 class="title">Оформлення замовлення</h2>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="container">
+          <form action="">
+            <div class="cart__flex">
+              <div class="cart__contact">
+                <div class="cart__contact-form">
+                  <input type="text" placeholder="Прізвище" name="surname" />
+                  <input type="text" placeholder="Ім’я" name="name" />
+                  <input
+                    type="tel"
+                    placeholder="Номер телефону"
+                    name="phone"
+                    required
+                  />
+                </div>
+                <div class="cart__contact-delivery">
+                  <div class="delivery__change">
+                    <label>
+                      <input
+                        type="radio"
+                        name="deliveryMethod"
+                        value="Самовивіз з Магазину м.Хмельницький, вул. Герцена 10"
+                      />
+                      <p>
+                        Самовивіз з Магазину
+                        <span>м.Хмельницький, вул. Герцена 10</span>
+                      </p>
+                    </label>
+                    <label>
+                      <input
+                        type="radio"
+                        name="deliveryMethod"
+                        value="Доставка кур'єром"
+                      />
+                      <p>Доставка кур'єром</p>
+                    </label>
+                    <label>
+                      <input
+                        type="radio"
+                        name="deliveryMethod"
+                        value="Самовивіз з відділень поштових операторів"
+                        id="deliveryService"
+                      />
+                      <p>Самовивіз з відділень поштових операторів</p>
+                    </label>
+                  </div>
+                  <div class="delivery__service">
+                    <select name="deliveryService">
+                      <option value="Перевізник">Перевізник</option>
+                      <option value="Укр Пошта">Укр Пошта</option>
+                      <option value="Нова Пошта">Нова Пошта</option>
+                    </select>
+                    <input type="text" placeholder="Місто" name="sity" />
+                    <select name="deliveryDepartment">
+                      <option value="Відділення">Відділення</option>
+                      <option value="Відділення №1">Відділення №1</option>
+                      <option value="Відділення №2">Відділення №2</option>
+                    </select>
+                  </div>
+                  <div class="pay__service">
+                    <div class="pay__change">
+                      <label>
+                        <input
+                          type="radio"
+                          name="payMathod"
+                          value="Оплата під час отримання товару"
+                        />
+                        <p>Оплата під час отримання товару</p>
+                      </label>
+                      <label>
+                        <input
+                          type="radio"
+                          name="payMathod"
+                          value="Оплатити зараз"
+                          id="cartData"
+                        />
+                        <p>Оплатити зараз</p>
+                      </label>
+                    </div>
+                    <div class="pay__cart">
+                      <input
+                        type="tel"
+                        placeholder="Номер картки"
+                        id="catNumber"
+                        pattern="\d*"
+                        maxlength="19"
+                      />
+                      <input type="text" placeholder="Ім'я власника картки" />
+                      <input
+                        type="tel"
+                        placeholder="Термін дії"
+                        id="cartExpires"
+                        pattern="\d*"
+                      />
+                      <input
+                        type="tel"
+                        placeholder="CVV"
+                        maxlength="3"
+                        id="cartCvv"
+                        pattern="\d*"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="cart__total">
+                <h3>Ваше замовлення</h3>
+                <div class="cart__total-price">
+                  <span>Всього</span>
+                  <p>₴32998</p>
+                </div>
+                <div class="cart__total-description">
+                  <p>
+                    Після підтвердження замовлення наш менеджер зв'яжеться з
+                    вами найближчим часом для уточнення деталей
+                  </p>
+                </div>
+                <div class="cart__total-btn">
+                  <button type="submit">
+                    <span>Підтвердити замовлення</span
+                    ><img src="@img/arrow-next.svg" alt="" />
+                  </button>
+                </div>
+              </div>
+            </div>
+          </form>
+          <div class="contact__bnt">
+            <a href="cart.html" class="cart__back">Назад до корзини</a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="js/main.min.js"></script>
+  </body>
+</html>
