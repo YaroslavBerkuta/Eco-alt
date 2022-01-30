@@ -68,15 +68,14 @@ get_header();
             </div>
             <div class="brand-swiper">
                 <div class="brand-wrapper">
-                    <a class="brand-item" href=""><img src="img/ch.png" alt=""/></a>
-                    <a class="brand-item" href=""><img src="img/toshiba.png" alt=""/></a>
-                    <a class="brand-item" href=""><img src="img/gree.png" alt=""/></a>
-                    <a class="brand-item" href=""><img src="img/leberg.png" alt=""/></a>
-                    <a class="brand-item" href=""><img src="img/midea.png" alt=""/></a>
-                    <a class="brand-item" href=""><img src="img/mitsubishi.png" alt=""/></a>
-                    <a class="brand-item" href=""><img src="img/neoclima.png" alt=""/></a>
-                    <a class="brand-item" href=""><img src="img/panasonic.png" alt=""/></a>
-                </div>
+                    <a class="brand-item" href="shop?="><img src="img/ch.png" alt=""/></a>
+                    <a class="brand-item" href="shop"><img src="img/toshiba.png" alt=""/></a>
+                    <a class="brand-item" href="shop"><img src="img/gree.png" alt=""/></a>
+                    <a class="brand-item" href="shop"><img src="img/leberg.png" alt=""/></a>
+                    <a class="brand-item" href="shop"><img src="img/midea.png" alt=""/></a>
+                    <a class="brand-item" href="shop"><img src="img/mitsubishi.png" alt=""/></a>
+                    <a class="brand-item" href="shop"><img src="img/neoclima.png" alt=""/></a>
+                    <a class="brand-item" href="shop"><img src="img/panasonic.png" alt=""/></a>shop
             </div>
         </section>
         <section class="section-relative-navigation">

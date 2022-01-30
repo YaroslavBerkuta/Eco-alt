@@ -1,0 +1,96 @@
+2022-01-29T21:35:22+00:00 CRITICAL Uncaught Error: Call to undefined function the_field() in C:\MAMP\htdocs\Eco-alt\wp-content\themes\eco-alt\header.php:52
+Stack trace:
+#0 C:\MAMP\htdocs\Eco-alt\wp-includes\template.php(770): require_once()
+#1 C:\MAMP\htdocs\Eco-alt\wp-includes\template.php(716): load_template('C:\\MAMP\\htdocs\\...', true, Array)
+#2 C:\MAMP\htdocs\Eco-alt\wp-includes\general-template.php(48): locate_template(Array, true, true, Array)
+#3 C:\MAMP\htdocs\Eco-alt\wp-content\themes\eco-alt\page.php(15): get_header()
+#4 C:\MAMP\htdocs\Eco-alt\wp-includes\template-loader.php(106): include('C:\\MAMP\\htdocs\\...')
+#5 C:\MAMP\htdocs\Eco-alt\wp-blog-header.php(19): require_once('C:\\MAMP\\htdocs\\...')
+#6 C:\MAMP\htdocs\Eco-alt\index.php(17): require('C:\\MAMP\\htdocs\\...')
+#7 {main}
+  thrown in C:\MAMP\htdocs\Eco-alt\wp-content\themes\eco-alt\header.php on line 52
+
+2022-01-29T21:37:39+00:00 CRITICAL Uncaught Error: Call to undefined function the_field() in C:\MAMP\htdocs\Eco-alt\wp-content\themes\eco-alt\header.php:52
+Stack trace:
+#0 C:\MAMP\htdocs\Eco-alt\wp-includes\template.php(770): require_once()
+#1 C:\MAMP\htdocs\Eco-alt\wp-includes\template.php(716): load_template('C:\\MAMP\\htdocs\\...', true, Array)
+#2 C:\MAMP\htdocs\Eco-alt\wp-includes\general-template.php(48): locate_template(Array, true, true, Array)
+#3 C:\MAMP\htdocs\Eco-alt\wp-content\themes\eco-alt\page.php(15): get_header()
+#4 C:\MAMP\htdocs\Eco-alt\wp-includes\template-loader.php(106): include('C:\\MAMP\\htdocs\\...')
+#5 C:\MAMP\htdocs\Eco-alt\wp-blog-header.php(19): require_once('C:\\MAMP\\htdocs\\...')
+#6 C:\MAMP\htdocs\Eco-alt\index.php(17): require('C:\\MAMP\\htdocs\\...')
+#7 {main}
+  thrown in C:\MAMP\htdocs\Eco-alt\wp-content\themes\eco-alt\header.php on line 52
+
+2022-01-29T21:37:51+00:00 CRITICAL Uncaught Error: Call to undefined function the_field() in C:\MAMP\htdocs\Eco-alt\wp-content\themes\eco-alt\header.php:52
+Stack trace:
+#0 C:\MAMP\htdocs\Eco-alt\wp-includes\template.php(770): require_once()
+#1 C:\MAMP\htdocs\Eco-alt\wp-includes\template.php(716): load_template('C:\\MAMP\\htdocs\\...', true, Array)
+#2 C:\MAMP\htdocs\Eco-alt\wp-includes\general-template.php(48): locate_template(Array, true, true, Array)
+#3 C:\MAMP\htdocs\Eco-alt\wp-content\themes\eco-alt\page.php(15): get_header()
+#4 C:\MAMP\htdocs\Eco-alt\wp-includes\template-loader.php(106): include('C:\\MAMP\\htdocs\\...')
+#5 C:\MAMP\htdocs\Eco-alt\wp-blog-header.php(19): require_once('C:\\MAMP\\htdocs\\...')
+#6 C:\MAMP\htdocs\Eco-alt\index.php(17): require('C:\\MAMP\\htdocs\\...')
+#7 {main}
+  thrown in C:\MAMP\htdocs\Eco-alt\wp-content\themes\eco-alt\header.php on line 52
+
+2022-01-29T21:37:58+00:00 CRITICAL Uncaught Error: Call to undefined function the_field() in C:\MAMP\htdocs\Eco-alt\wp-content\themes\eco-alt\header.php:52
+Stack trace:
+#0 C:\MAMP\htdocs\Eco-alt\wp-includes\template.php(770): require_once()
+#1 C:\MAMP\htdocs\Eco-alt\wp-includes\template.php(716): load_template('C:\\MAMP\\htdocs\\...', true, Array)
+#2 C:\MAMP\htdocs\Eco-alt\wp-includes\general-template.php(48): locate_template(Array, true, true, Array)
+#3 C:\MAMP\htdocs\Eco-alt\wp-content\themes\eco-alt\page-template\home.php(3): get_header()
+#4 C:\MAMP\htdocs\Eco-alt\wp-includes\template-loader.php(106): include('C:\\MAMP\\htdocs\\...')
+#5 C:\MAMP\htdocs\Eco-alt\wp-blog-header.php(19): require_once('C:\\MAMP\\htdocs\\...')
+#6 C:\MAMP\htdocs\Eco-alt\index.php(17): require('C:\\MAMP\\htdocs\\...')
+#7 {main}
+  thrown in C:\MAMP\htdocs\Eco-alt\wp-content\themes\eco-alt\header.php on line 52
+
+2022-01-29T21:38:03+00:00 CRITICAL Uncaught Error: Call to undefined function the_field() in C:\MAMP\htdocs\Eco-alt\wp-content\themes\eco-alt\header.php:52
+Stack trace:
+#0 C:\MAMP\htdocs\Eco-alt\wp-includes\template.php(770): require_once()
+#1 C:\MAMP\htdocs\Eco-alt\wp-includes\template.php(716): load_template('C:\\MAMP\\htdocs\\...', true, Array)
+#2 C:\MAMP\htdocs\Eco-alt\wp-includes\general-template.php(48): locate_template(Array, true, true, Array)
+#3 C:\MAMP\htdocs\Eco-alt\wp-content\themes\eco-alt\page-template\home.php(3): get_header()
+#4 C:\MAMP\htdocs\Eco-alt\wp-includes\template-loader.php(106): include('C:\\MAMP\\htdocs\\...')
+#5 C:\MAMP\htdocs\Eco-alt\wp-blog-header.php(19): require_once('C:\\MAMP\\htdocs\\...')
+#6 C:\MAMP\htdocs\Eco-alt\index.php(17): require('C:\\MAMP\\htdocs\\...')
+#7 {main}
+  thrown in C:\MAMP\htdocs\Eco-alt\wp-content\themes\eco-alt\header.php on line 52
+
+2022-01-29T21:44:18+00:00 CRITICAL Uncaught Error: Call to undefined function the_field() in C:\MAMP\htdocs\Eco-alt\wp-content\themes\eco-alt\header.php:52
+Stack trace:
+#0 C:\MAMP\htdocs\Eco-alt\wp-includes\template.php(770): require_once()
+#1 C:\MAMP\htdocs\Eco-alt\wp-includes\template.php(716): load_template('C:\\MAMP\\htdocs\\...', true, Array)
+#2 C:\MAMP\htdocs\Eco-alt\wp-includes\general-template.php(48): locate_template(Array, true, true, Array)
+#3 C:\MAMP\htdocs\Eco-alt\wp-content\themes\eco-alt\page-template\home.php(3): get_header()
+#4 C:\MAMP\htdocs\Eco-alt\wp-includes\template-loader.php(106): include('C:\\MAMP\\htdocs\\...')
+#5 C:\MAMP\htdocs\Eco-alt\wp-blog-header.php(19): require_once('C:\\MAMP\\htdocs\\...')
+#6 C:\MAMP\htdocs\Eco-alt\index.php(17): require('C:\\MAMP\\htdocs\\...')
+#7 {main}
+  thrown in C:\MAMP\htdocs\Eco-alt\wp-content\themes\eco-alt\header.php on line 52
+
+2022-01-29T21:49:20+00:00 CRITICAL Uncaught Error: Call to undefined function the_field() in C:\MAMP\htdocs\Eco-alt\wp-content\themes\eco-alt\header.php:52
+Stack trace:
+#0 C:\MAMP\htdocs\Eco-alt\wp-includes\template.php(770): require_once()
+#1 C:\MAMP\htdocs\Eco-alt\wp-includes\template.php(716): load_template('C:\\MAMP\\htdocs\\...', true, Array)
+#2 C:\MAMP\htdocs\Eco-alt\wp-includes\general-template.php(48): locate_template(Array, true, true, Array)
+#3 C:\MAMP\htdocs\Eco-alt\wp-content\themes\eco-alt\page-template\home.php(3): get_header()
+#4 C:\MAMP\htdocs\Eco-alt\wp-includes\template-loader.php(106): include('C:\\MAMP\\htdocs\\...')
+#5 C:\MAMP\htdocs\Eco-alt\wp-blog-header.php(19): require_once('C:\\MAMP\\htdocs\\...')
+#6 C:\MAMP\htdocs\Eco-alt\index.php(17): require('C:\\MAMP\\htdocs\\...')
+#7 {main}
+  thrown in C:\MAMP\htdocs\Eco-alt\wp-content\themes\eco-alt\header.php on line 52
+
+2022-01-29T21:53:41+00:00 CRITICAL Uncaught Error: Call to undefined function the_field() in C:\MAMP\htdocs\Eco-alt\wp-content\themes\eco-alt\header.php:52
+Stack trace:
+#0 C:\MAMP\htdocs\Eco-alt\wp-includes\template.php(770): require_once()
+#1 C:\MAMP\htdocs\Eco-alt\wp-includes\template.php(716): load_template('C:\\MAMP\\htdocs\\...', true, Array)
+#2 C:\MAMP\htdocs\Eco-alt\wp-includes\general-template.php(48): locate_template(Array, true, true, Array)
+#3 C:\MAMP\htdocs\Eco-alt\wp-content\themes\eco-alt\page-template\home.php(3): get_header()
+#4 C:\MAMP\htdocs\Eco-alt\wp-includes\template-loader.php(106): include('C:\\MAMP\\htdocs\\...')
+#5 C:\MAMP\htdocs\Eco-alt\wp-blog-header.php(19): require_once('C:\\MAMP\\htdocs\\...')
+#6 C:\MAMP\htdocs\Eco-alt\index.php(17): require('C:\\MAMP\\htdocs\\...')
+#7 {main}
+  thrown in C:\MAMP\htdocs\Eco-alt\wp-content\themes\eco-alt\header.php on line 52
+

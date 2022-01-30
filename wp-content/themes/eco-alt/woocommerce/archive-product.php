@@ -46,7 +46,7 @@ get_header();
                 <div class="shop__bottom">
                     <aside class="shop__filter">
                         <form action="" class="shop__filter-form">
-                            <div class="shop__filter-item">
+                            <div class="shop__filter-item vendor">
                                 <div class="accordion">
                                     <p>Виробник</p>
                                     <svg
@@ -70,17 +70,17 @@ get_header();
                                     </label>
                                     <label
                                     >LG
-                                        <input type="checkbox"/>
+                                        <input type="checkbox" data-filter-vendor="LG"/>
                                         <span class="checkmark"></span>
                                     </label>
                                     <label
                                     >Gree
-                                        <input type="checkbox"/>
+                                        <input type="checkbox" data-filter-vendor="Gree"/>
                                         <span class="checkmark"></span>
                                     </label>
                                 </div>
                             </div>
-                            <div class="shop__filter-item">
+                            <div class="shop__filter-item compressor">
                                 <div class="accordion">
                                     <p>Компресор</p>
                                     <svg
@@ -98,13 +98,13 @@ get_header();
                                 </div>
                                 <div class="panel">
                                     <label
-                                    >Toshiba
-                                        <input type="checkbox"/>
+                                    >Компресор 1
+                                        <input type="checkbox" data-filter-compressor="компремор 1"/>
                                         <span class="checkmark"></span>
                                     </label>
                                     <label
-                                    >LG
-                                        <input type="checkbox"/>
+                                    >Топ компресор
+                                        <input type="checkbox"  data-filter-compressor="топ компресор"/>
                                         <span class="checkmark"></span>
                                     </label>
                                     <label
@@ -115,7 +115,7 @@ get_header();
                                 </div>
                             </div>
 
-                            <div class="shop__filter-item">
+                            <div class="shop__filter-item area">
                                 <div class="accordion">
                                     <p>Площа приміщення, м²</p>
                                     <svg
@@ -133,13 +133,13 @@ get_header();
                                 </div>
                                 <div class="panel">
                                     <label
-                                    >Toshiba
-                                        <input type="checkbox"/>
+                                    >35м^2
+                                        <input type="checkbox" data-filter-area="35м^2"/>
                                         <span class="checkmark"></span>
                                     </label>
                                     <label
-                                    >LG
-                                        <input type="checkbox"/>
+                                    >25м^2
+                                        <input type="checkbox" data-filter-area="25м^2"/>
                                         <span class="checkmark"></span>
                                     </label>
                                     <label
@@ -149,7 +149,7 @@ get_header();
                                     </label>
                                 </div>
                             </div>
-                            <div class="shop__filter-item">
+                            <div class="shop__filter-item mode">
                                 <div class="accordion">
                                     <p>Режими роботи</p>
                                     <svg
@@ -167,13 +167,13 @@ get_header();
                                 </div>
                                 <div class="panel">
                                     <label
-                                    >Toshiba
-                                        <input type="checkbox"/>
+                                    >Норм працює
+                                        <input type="checkbox" data-filter-mode="норм працює"/>
                                         <span class="checkmark"></span>
                                     </label>
                                     <label
-                                    >LG
-                                        <input type="checkbox"/>
+                                    >Нічний режим
+                                        <input type="checkbox" data-filter-mode="нічний режим"/>
                                         <span class="checkmark"></span>
                                     </label>
                                     <label
@@ -183,7 +183,7 @@ get_header();
                                     </label>
                                 </div>
                             </div>
-                            <div class="shop__filter-item">
+                            <div class="shop__filter-item price">
                                 <div class="accordion">
                                     <p>Ціна</p>
                                     <svg
@@ -218,14 +218,14 @@ get_header();
                                             />
                                         </div>
                                         <div class="price__value">
-                                            <input
+                                            <input class="price__value_min"
                                                     type="number"
                                                     value="0"
                                                     min="0"
                                                     max="120000"
                                             />
                                             <span>-</span>
-                                            <input
+                                            <input class="price__value_max"
                                                     type="number"
                                                     value="50000"
                                                     min="0"

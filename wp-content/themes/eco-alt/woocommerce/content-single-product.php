@@ -19,7 +19,7 @@ global $product;
                             <h1><?php echo $product->name; ?></h1>
                         </div>
                         <div class="product__model">
-                            <h3><?php echo $product->get_attribute('model'); ?></h3>
+                            <h3><?php echo $product->get_attribute('модель'); ?></h3>
                         </div>
 
                         <?php
