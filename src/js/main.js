@@ -85,6 +85,16 @@ const filterTovar = new Swiper(".filter__tovar", {
     prevEl: ".swiper-button-prev",
   },
   setWrapperSize: true,
+  breakpoints:{
+    1024:{
+      grid: {
+        rows: 1,
+        fill: "row",
+      },
+      loop:true,
+      slidesPerView: "auto",
+    }
+  }
 });
 
 var acc = document.getElementsByClassName("accordion");
