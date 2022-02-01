@@ -270,3 +270,7 @@ function resolve_dupes_add_to_cart_redirect($url = false) {
     return get_bloginfo('wpurl').add_query_arg(array(), remove_query_arg('add-to-cart'));
 
 }
+
+
+
+
