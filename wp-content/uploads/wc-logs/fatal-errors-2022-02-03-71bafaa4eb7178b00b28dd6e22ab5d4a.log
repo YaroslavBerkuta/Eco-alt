@@ -1,0 +1,18 @@
+2022-02-03T14:36:05+00:00 CRITICAL Cannot redeclare register_taxonomy() (previously declared in C:\MAMP\htdocs\Eco-alt\wp-includes\taxonomy.php:445) in C:\MAMP\htdocs\Eco-alt\wp-content\themes\eco-alt\functions.php on line 334
+
+2022-02-03T14:41:34+00:00 CRITICAL Cannot redeclare create_taxonomy() (previously declared in C:\MAMP\htdocs\Eco-alt\wp-content\themes\eco-alt\functions.php:283) in C:\MAMP\htdocs\Eco-alt\wp-content\themes\eco-alt\functions.php on line 356
+
+2022-02-03T14:41:35+00:00 CRITICAL Cannot redeclare create_taxonomy() (previously declared in C:\MAMP\htdocs\Eco-alt\wp-content\themes\eco-alt\functions.php:283) in C:\MAMP\htdocs\Eco-alt\wp-content\themes\eco-alt\functions.php on line 356
+
+2022-02-03T14:41:35+00:00 CRITICAL Cannot redeclare create_taxonomy() (previously declared in C:\MAMP\htdocs\Eco-alt\wp-content\themes\eco-alt\functions.php:283) in C:\MAMP\htdocs\Eco-alt\wp-content\themes\eco-alt\functions.php on line 356
+
+2022-02-03T14:44:08+00:00 CRITICAL syntax error, unexpected token "=", expecting ")" in C:\MAMP\htdocs\Eco-alt\wp-content\themes\eco-alt\functions.php on line 303
+
+2022-02-03T14:44:08+00:00 CRITICAL syntax error, unexpected token "=", expecting ")" in C:\MAMP\htdocs\Eco-alt\wp-content\themes\eco-alt\functions.php on line 303
+
+2022-02-03T14:44:09+00:00 CRITICAL syntax error, unexpected token "=", expecting ")" in C:\MAMP\htdocs\Eco-alt\wp-content\themes\eco-alt\functions.php on line 303
+
+2022-02-03T14:44:10+00:00 CRITICAL syntax error, unexpected token "=", expecting ")" in C:\MAMP\htdocs\Eco-alt\wp-content\themes\eco-alt\functions.php on line 303
+
+2022-02-03T15:25:33+00:00 CRITICAL syntax error, unexpected token "<" in C:\MAMP\htdocs\Eco-alt\wp-content\themes\eco-alt\page-template\objects.php on line 23
+

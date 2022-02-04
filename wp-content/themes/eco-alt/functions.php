@@ -149,6 +149,7 @@ function eco_alt_scripts() {
 
     wp_enqueue_script( 'eco-alt-main', get_template_directory_uri() . '/assets/js/main.min.js', array(), _S_VERSION, true );
     wp_enqueue_script( 'eco-alt-filters', get_template_directory_uri() . '/assets/js/filters.js', array(), _S_VERSION, true );
+    wp_enqueue_script( 'eco-alt-autorefresh', get_template_directory_uri() . '/assets/js/autorefresh.js', array(), _S_VERSION, true );
 
 
 
@@ -269,6 +270,83 @@ function resolve_dupes_add_to_cart_redirect($url = false) {
     // Мы добавляем часть «get_bloginfo», чтобы она сохраняла перенаправление на сайты https://.
     return get_bloginfo('wpurl').add_query_arg(array(), remove_query_arg('add-to-cart'));
 
+}
+
+
+
+//register portfolio taxonomy
+// хук для регистрации
+add_action( 'init', 'create_taxonomy' );
+function create_taxonomy(){
+
+    register_taxonomy( 'objects', array('portfolio') , array(
+        'label'                 => '', // определяется параметром $labels->name
+        'labels'                => array(
+            'name'              => 'Категорії',
+            'singular_name'     => 'Категорія',
+            'search_items'      => 'Знайти категорію',
+            'all_items'         => 'Всі категорії',
+            'view_item '        => 'Переглянути категорії',
+            'parent_item'       => 'Батьківська категорія',
+            'parent_item_colon' => 'Батьківська Категорія:',
+            'edit_item'         => 'Змінити категорію',
+            'update_item'       => 'Оновити категорію',
+            'add_new_item'      => 'Додати нову категорію',
+            'new_item_name'     => 'Нове ім\'я категорії',
+            'menu_name'         => 'Категорії',
+        ),
+        'description'           => 'Категорії портфоліо', // описание таксономии
+        'public'                => true,
+        'publicly_queryable'    => null, // равен аргументу public
+        'hierarchical'          => false,
+        'rewrite'               => true,
+        'show_in_rest' => true,
+
+    ) );
+}
+
+
+//register портволіо
+add_action( 'init', 'register_post_types' );
+function register_post_types(){
+    register_post_type( 'portfolio', [
+        'label'  => null,
+        'labels' => [
+            'name'               => 'Портфоліо', // основное название для типа записи
+            'singular_name'      => 'Портфоліо', // название для одной записи этого типа
+            'add_new'            => 'Додати роботу', // для добавления новой записи
+            'add_new_item'       => 'Додавання роботи', // заголовка у вновь создаваемой записи в админ-панели.
+            'edit_item'          => 'Редагування роботи', // для редактирования типа записи
+            'new_item'           => 'Нова робота', // текст новой записи
+            'view_item'          => 'Переглянути роботу', // для просмотра записи этого типа.
+            'search_items'       => 'Шукати роботу в портфоліо', // для поиска по этим типам записи
+            'not_found'          => 'Не знайдено', // если в результате поиска ничего не было найдено
+            'not_found_in_trash' => 'Не знайдено в кошику', // если не было найдено в корзине
+            'parent_item_colon'  => '', // для родителей (у древовидных типов)
+            'menu_name'          => 'Портфоліо', // название меню
+        ],
+        'description'         => 'Наші роботи в портфоліо',
+        'public'              => true,
+         'publicly_queryable'  => true, // зависит от public
+         'exclude_from_search' => true, // зависит от public
+         'show_ui'             => true, // зависит от public
+         'show_in_nav_menus'   => true, // зависит от public
+        'show_in_menu'        => true, // показывать ли в меню адмнки
+         'show_in_admin_bar'   => true, // зависит от show_in_menu
+        'show_in_rest'        => true, // добавить в REST API. C WP 4.7
+        'rest_base'           => null, // $post_type. C WP 4.7
+        'menu_position'       => null,
+        'menu_icon'           => null,
+        //'capability_type'   => 'post',
+        //'capabilities'      => 'post', // массив дополнительных прав для этого типа записи
+        //'map_meta_cap'      => null, // Ставим true чтобы включить дефолтный обработчик специальных прав
+        'hierarchical'        => false,
+        'supports'            => [ 'title', 'editor','thumbnail' ,'post-formats','excerpt'], // 'title','editor','author','thumbnail','excerpt','trackbacks','custom-fields','comments','revisions','page-attributes','post-formats'
+        'taxonomies'          => array('objects'),
+        'has_archive'         => false,
+        'rewrite'             => true,
+        'query_var'           => false,
+    ] );
 }
 
 

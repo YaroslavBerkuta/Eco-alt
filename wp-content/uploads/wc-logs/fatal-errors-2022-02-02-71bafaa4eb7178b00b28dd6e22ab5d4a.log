@@ -1,0 +1,10 @@
+2022-02-02T13:10:13+00:00 CRITICAL Uncaught Error: Failed opening required 'http://localhost/Eco-alt/wp-content/themes/eco-alt/assets/php/custom-taxonomy.php' (include_path='.;C:\php\pear') in C:\MAMP\htdocs\Eco-alt\wp-content\themes\eco-alt\functions.php:275
+Stack trace:
+#0 C:\MAMP\htdocs\Eco-alt\wp-settings.php(546): include()
+#1 C:\MAMP\htdocs\Eco-alt\wp-config.php(96): require_once('C:\\MAMP\\htdocs\\...')
+#2 C:\MAMP\htdocs\Eco-alt\wp-load.php(50): require_once('C:\\MAMP\\htdocs\\...')
+#3 C:\MAMP\htdocs\Eco-alt\wp-blog-header.php(13): require_once('C:\\MAMP\\htdocs\\...')
+#4 C:\MAMP\htdocs\Eco-alt\index.php(17): require('C:\\MAMP\\htdocs\\...')
+#5 {main}
+  thrown in C:\MAMP\htdocs\Eco-alt\wp-content\themes\eco-alt\functions.php on line 275
+
