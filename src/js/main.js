@@ -85,16 +85,37 @@ const filterTovar = new Swiper(".filter__tovar", {
     prevEl: ".swiper-button-prev",
   },
   setWrapperSize: true,
-  breakpoints:{
-    1024:{
+  breakpoints: {
+    1024: {
+      grid: {
+        rows: 2,
+        fill: "row",
+      },
+      loop: true,
+      slidesPerView: "auto",
+    },
+    768: {
       grid: {
         rows: 1,
         fill: "row",
       },
-      loop:true,
+      loop: true,
       slidesPerView: "auto",
-    }
-  }
+    },
+    425: {
+      grid: {
+        rows: 1,
+        fill: "row",
+      },
+    },
+    390: {
+      grid: {
+        rows: 1,
+        fill: "row",
+      },
+      loop: true,
+    },
+  },
 });
 
 var acc = document.getElementsByClassName("accordion");
@@ -173,7 +194,7 @@ const objectSlider = new Swiper(".object__flex", {
   slideClass: "object__item",
   slidesPerView: 4,
   grid: {
-    rows: 3,
+    rows: 4,
     fill: "row",
   },
   modules: [Grid, Navigation, Pagination],
@@ -184,6 +205,15 @@ const objectSlider = new Swiper(".object__flex", {
   pagination: {
     el: ".object-pagination",
     type: "fraction",
+  },
+  breakpoints: {
+    768: {
+      slidesPerView: 3,
+    },
+    425: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+    },
   },
 });
 if (document.querySelector(".cart__contact-delivery")) {
@@ -197,7 +227,7 @@ if (document.querySelector(".cart__contact-delivery")) {
     item.addEventListener("change", () => {
       deliveryMethod.forEach((method) => {
         method.addEventListener("change", () => {
-          if(method.id != "deliveryService"){
+          if (method.id != "deliveryService") {
             deliveryData.classList.remove("active");
           }
         });
@@ -208,14 +238,13 @@ if (document.querySelector(".cart__contact-delivery")) {
     });
   });
 
-
   const payMethod = document.querySelectorAll(".pay__change input");
   const payData = document.querySelector(".pay__cart");
   payMethod.forEach((item) => {
     item.addEventListener("change", () => {
       payMethod.forEach((method) => {
         method.addEventListener("change", () => {
-          if(method.id != "cartData"){
+          if (method.id != "cartData") {
             payData.classList.remove("active");
           }
         });
@@ -226,3 +255,21 @@ if (document.querySelector(".cart__contact-delivery")) {
     });
   });
 }
+
+const burger = document.querySelector(".header__burger");
+const menu = document.querySelector(".header__mobil");
+
+burger.addEventListener("click", () => {
+  menu.classList.toggle("active");
+  burger.classList.toggle("active");
+});
+
+const fiterCart = document.querySelector(".mobil__filter");
+const filterBlock = document.querySelector(".shop__bottom .shop__filter ");
+const closeCatalogFilter = document.querySelector(".closse__filter");
+fiterCart.addEventListener("click", () => {
+  filterBlock.classList.add("active");
+});
+closeCatalogFilter.addEventListener("click", () => {
+  filterBlock.classList.remove("active");
+});
