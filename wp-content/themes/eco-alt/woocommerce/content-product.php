@@ -2,9 +2,14 @@
 global $product;
 global $persentage;
 $product_image_url = get_the_post_thumbnail_url($product->get_id(), 'large');//головне фото товара
+$vendors=get_the_terms($product->get_id(),'vendors');
+     //print_r($vendors);
+
 ?>
 <div class="filter__cart"
-     data-vendor="<?php echo $product->get_attribute('Виробник'); ?>"
+     data-vendor="<?php foreach ($vendors as $vendor) {
+    echo $vendor->name;
+}?>"
 data-compressor="<?php echo $product->get_attribute('Компресор'); ?>"
 data-area="<?php echo $product->get_attribute('Площа приміщення'); ?>"
 data-mode="<?php echo $product->get_attribute('Режим роботи'); ?>"

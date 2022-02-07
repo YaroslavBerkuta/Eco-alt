@@ -21,7 +21,7 @@ get_header();
                         //заповнити
                            // print_r($objects);
                         foreach ($objects as $object){ ?>
-                            <div class="filter__item" data-filter-category-id="<?php echo $object->term_id;?>">
+                            <div class="filter__item" data-filter-category="<?php echo $object->name;?>">
                                 <button><?php echo $object->name; ?></button>
                             </div>
                        <?php  }
@@ -39,12 +39,11 @@ get_header();
                         );
 
                         $posts = get_posts($args);
-                        $terms=get_terms($args);
-                        print_r($terms);
+                        $terms=get_the_taxonomies();
                         foreach ($posts as $post) {
 
                             setup_postdata($post); ?>
-                            <div class="object__item" data-category-id="1">
+                            <div class="object__item" data-category="<?php echo $object->name;?>">
                                 <img src="<?php echo get_the_post_thumbnail_url() ?>" alt=""/>
                             </div>
                         <?php }

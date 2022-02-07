@@ -75,8 +75,8 @@ get_header();
                     <a class="brand-item" href="shop"><img src="img/midea.png" alt=""/></a>
                     <a class="brand-item" href="shop"><img src="img/mitsubishi.png" alt=""/></a>
                     <a class="brand-item" href="shop"><img src="img/neoclima.png" alt=""/></a>
-                    <a class="brand-item" href="shop"><img src="img/panasonic.png" alt=""/></a>shop
-            </div>
+                    <a class="brand-item" href="shop"><img src="img/panasonic.png" alt=""/></a>
+                </div>
         </section>
         <section class="section-relative-navigation">
             <div class="container">
@@ -110,15 +110,12 @@ get_header();
                         $mypost_Query = new WP_Query(array(
                             'post_type' => 'product',
                             'post_status' => 'publish',
-
-                            'product_category_name'
+                            'product_tag' => 'хіт',
                         ));
 
                         if ($mypost_Query->have_posts()) {
                             while ($mypost_Query->have_posts()) {
                                 $mypost_Query->the_post();
-                                if (strpos($product->get_tags(),'хіт')!==false or $product->is_on_sale()) {
-
                                     ?>
                                     <a class="filter__cart" href="<?php echo get_the_permalink(); ?>"
                                        data-category-id="<?php echo implode(';', $product->get_category_ids()) ?>">
@@ -140,12 +137,32 @@ get_header();
                                     </a>
 
                                     <?php
-                                }
                             }
                         } else {
                             echo('<p>Извините, нет товаров.</p>');
                         }
                         wp_reset_postdata();
+                        ?>
+
+                        <?php
+                        //sale product
+
+                        $product_ids_on_sale = wc_get_product_ids_on_sale();
+
+                        $args = array(
+                            'post_type' => 'product',
+                            'post__in' => array_merge(array(0), $product_ids_on_sale)
+                        );
+                        $loop = new WP_Query($args);
+                        if ($loop->have_posts()) {
+                            while ($loop->have_posts()) : $loop->the_post();
+                                wc_get_template_part('content', 'product');
+                            endwhile;
+                        } else {
+                            echo __('Продуктов не найдено');
+                        }
+                        wp_reset_postdata();
+
                         ?>
 
                     </div>

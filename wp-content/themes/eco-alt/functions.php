@@ -351,4 +351,126 @@ function register_post_types(){
 
 
 
+//Виробник
+add_action( 'init', 'create_taxonomy_vendor' );
+function create_taxonomy_vendor(){
 
+    register_taxonomy( 'vendors', array('product') , array(
+        'label'                 => '', // определяется параметром $labels->name
+        'labels'                => array(
+            'name'              => 'Виробники',
+            'singular_name'     => 'Виробник',
+            'search_items'      => 'Знайти виробника',
+            'all_items'         => 'Всі виробники',
+            'view_item '        => 'Переглянути виробників',
+            'parent_item'       => 'Батьківський виробник',
+            'parent_item_colon' => 'Батьківськй вирообник:',
+            'edit_item'         => 'Змінити виробника',
+            'update_item'       => 'Оновити виробника',
+            'add_new_item'      => 'Додати нового виробника',
+            'new_item_name'     => 'Нове ім\'я виробника',
+            'menu_name'         => 'Виробники',
+        ),
+        'description'           => 'Виробники', // описание таксономии
+        'public'                => true,
+        'publicly_queryable'    => null, // равен аргументу public
+        'hierarchical'          => false,
+        'rewrite'               => true,
+        'show_in_rest' => true,
+
+    ) );
+}
+
+
+//площа приміщення
+add_action( 'init', 'create_taxonomy_area' );
+function create_taxonomy_area(){
+
+    register_taxonomy( 'area', array('product') , array(
+        'label'                 => '', // определяется параметром $labels->name
+        'labels'                => array(
+            'name'              => 'Площі',
+            'singular_name'     => 'Площа',
+            'search_items'      => 'Знайти площу',
+            'all_items'         => 'Всі площі',
+            'view_item '        => 'Переглянути площі',
+            'parent_item'       => 'Батьківська площа',
+            'parent_item_colon' => 'Батьківська площа:',
+            'edit_item'         => 'Змінити площу',
+            'update_item'       => 'Оновити площу',
+            'add_new_item'      => 'Додати нову площу',
+            'new_item_name'     => 'Нове ім\'я площі',
+            'menu_name'         => 'Площі',
+        ),
+        'description'           => 'Площі', // описание таксономии
+        'public'                => true,
+        'publicly_queryable'    => null, // равен аргументу public
+        'hierarchical'          => false,
+        'rewrite'               => true,
+        'show_in_rest' => true,
+
+    ) );
+}
+
+
+
+//компресор
+add_action( 'init', 'create_taxonomy_compressor' );
+function create_taxonomy_compressor(){
+
+    register_taxonomy( 'compressor', array('product') , array(
+        'label'                 => '', // определяется параметром $labels->name
+        'labels'                => array(
+            'name'              => 'Компресори',
+            'singular_name'     => 'Компресор',
+            'search_items'      => 'Знайти компресор',
+            'all_items'         => 'Всі компресори',
+            'view_item '        => 'Переглянути компресори',
+            'parent_item'       => 'Батьківський компресор',
+            'parent_item_colon' => 'Батьківськй компресор:',
+            'edit_item'         => 'Змінити компресор',
+            'update_item'       => 'Оновити компресор',
+            'add_new_item'      => 'Додати новий компресор',
+            'new_item_name'     => 'Нове ім\'я компресора',
+            'menu_name'         => 'Компресори',
+        ),
+        'description'           => 'Компресори', // описание таксономии
+        'public'                => true,
+        'publicly_queryable'    => null, // равен аргументу public
+        'hierarchical'          => false,
+        'rewrite'               => true,
+        'show_in_rest' => true,
+
+    ) );
+}
+
+
+//режим роботи
+add_action( 'init', 'create_taxonomy_mode' );
+function create_taxonomy_mode(){
+
+    register_taxonomy( 'mode', array('product') , array(
+        'label'                 => '', // определяется параметром $labels->name
+        'labels'                => array(
+            'name'              => 'Режими роботи',
+            'singular_name'     => 'Режим роботи',
+            'search_items'      => 'Знайти режим роботи',
+            'all_items'         => 'Всі режими роботи',
+            'view_item '        => 'Переглянути режими роботи',
+            'parent_item'       => 'Батьківський режим роботи',
+            'parent_item_colon' => 'Батьківськй режим роботи:',
+            'edit_item'         => 'Змінити режим роботи',
+            'update_item'       => 'Оновити режим роботи',
+            'add_new_item'      => 'Додати новий режим роботи',
+            'new_item_name'     => 'Нове ім\'я режиму роботи',
+            'menu_name'         => 'Режими роботи',
+        ),
+        'description'           => 'Режаит роботи', // описание таксономии
+        'public'                => true,
+        'publicly_queryable'    => null, // равен аргументу public
+        'hierarchical'          => false,
+        'rewrite'               => true,
+        'show_in_rest' => true,
+
+    ) );
+}

@@ -63,21 +63,21 @@ get_header();
                                     </svg>
                                 </div>
                                 <div class="panel">
-                                    <label
-                                    >Toshiba
-                                        <input type="checkbox"/>
-                                        <span class="checkmark"></span>
-                                    </label>
-                                    <label
-                                    >LG
-                                        <input type="checkbox" data-filter-vendor="LG"/>
-                                        <span class="checkmark"></span>
-                                    </label>
-                                    <label
-                                    >Gree
-                                        <input type="checkbox" data-filter-vendor="Gree"/>
-                                        <span class="checkmark"></span>
-                                    </label>
+                                    <?php
+                                    $args = array(
+                                        //'post_type' => 'portfolio',
+                                        'taxonomy' => 'vendors',
+                                        //'name '=>'objects'
+                                    );
+                                    $vendors = get_terms($args);
+                                    foreach ($vendors as $vendor) { ?>
+                                        <label
+                                        ><?php echo $vendor->name; ?>
+                                            <input type="checkbox" data-filter-vendor="<?php echo $vendor->name; ?>"/>
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    <?php }
+                                    ?>
                                 </div>
                             </div>
                             <div class="shop__filter-item compressor">
@@ -97,21 +97,22 @@ get_header();
                                     </svg>
                                 </div>
                                 <div class="panel">
-                                    <label
-                                    >Компресор 1
-                                        <input type="checkbox" data-filter-compressor="компремор 1"/>
-                                        <span class="checkmark"></span>
-                                    </label>
-                                    <label
-                                    >Топ компресор
-                                        <input type="checkbox"  data-filter-compressor="топ компресор"/>
-                                        <span class="checkmark"></span>
-                                    </label>
-                                    <label
-                                    >Gree
-                                        <input type="checkbox"/>
-                                        <span class="checkmark"></span>
-                                    </label>
+                                    <?php
+                                    $args = array(
+
+                                        'taxonomy' => 'compressor',
+
+                                    );
+                                    $compressors = get_terms($args);
+                                    foreach ($compressors as $compressor) { ?>
+                                        <label
+                                        ><?php echo $compressor->name; ?>
+                                            <input type="checkbox"
+                                                   data-filter-compressor="<?php echo $compressor->name; ?>"/>
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    <?php }
+                                    ?>
                                 </div>
                             </div>
 
@@ -133,20 +134,21 @@ get_header();
                                 </div>
                                 <div class="panel">
                                     <label
-                                    >35м^2
-                                        <input type="checkbox" data-filter-area="35м^2"/>
-                                        <span class="checkmark"></span>
-                                    </label>
-                                    <label
-                                    >25м^2
-                                        <input type="checkbox" data-filter-area="25м^2"/>
-                                        <span class="checkmark"></span>
-                                    </label>
-                                    <label
-                                    >Gree
-                                        <input type="checkbox"/>
-                                        <span class="checkmark"></span>
-                                    </label>
+                                    <?php
+                                    $args = array(
+
+                                        'taxonomy' => 'area',
+
+                                    );
+                                    $area = get_terms($args);
+                                    foreach ($area as $val) { ?>
+                                        <label
+                                        ><?php echo $val->name; ?>
+                                            <input type="checkbox" data-filter-area="<?php echo $val->name; ?>"/>
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    <?php }
+                                    ?>
                                 </div>
                             </div>
                             <div class="shop__filter-item mode">
@@ -166,21 +168,21 @@ get_header();
                                     </svg>
                                 </div>
                                 <div class="panel">
-                                    <label
-                                    >Норм працює
-                                        <input type="checkbox" data-filter-mode="норм працює"/>
-                                        <span class="checkmark"></span>
-                                    </label>
-                                    <label
-                                    >Нічний режим
-                                        <input type="checkbox" data-filter-mode="нічний режим"/>
-                                        <span class="checkmark"></span>
-                                    </label>
-                                    <label
-                                    >Gree
-                                        <input type="checkbox"/>
-                                        <span class="checkmark"></span>
-                                    </label>
+                                    <?php
+                                    $args = array(
+
+                                        'taxonomy' => 'mode',
+
+                                    );
+                                    $modes = get_terms($args);
+                                    foreach ($modes as $mode) { ?>
+                                        <label
+                                        ><?php echo $mode->name; ?>
+                                            <input type="checkbox" data-filter-area="<?php echo $mode->name; ?>"/>
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    <?php }
+                                    ?>
                                 </div>
                             </div>
                             <div class="shop__filter-item price">
@@ -219,17 +221,17 @@ get_header();
                                         </div>
                                         <div class="price__value">
                                             <input class="price__value_min"
-                                                    type="number"
-                                                    value="0"
-                                                    min="0"
-                                                    max="120000"
+                                                   type="number"
+                                                   value="0"
+                                                   min="0"
+                                                   max="120000"
                                             />
                                             <span>-</span>
                                             <input class="price__value_max"
-                                                    type="number"
-                                                    value="50000"
-                                                    min="0"
-                                                    max="120000"
+                                                   type="number"
+                                                   value="50000"
+                                                   min="0"
+                                                   max="120000"
                                             />
                                         </div>
                                     </div>
