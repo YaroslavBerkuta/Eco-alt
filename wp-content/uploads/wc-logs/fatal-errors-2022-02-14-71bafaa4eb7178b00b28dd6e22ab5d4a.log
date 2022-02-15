@@ -1,0 +1,24 @@
+2022-02-14T14:08:22+00:00 CRITICAL Uncaught Error: Call to a member function get_id() on null in C:\MAMP\htdocs\Eco-alt\wp-content\themes\eco-alt\page-template\objects.php:4
+Stack trace:
+#0 C:\MAMP\htdocs\Eco-alt\wp-includes\template-loader.php(106): include()
+#1 C:\MAMP\htdocs\Eco-alt\wp-blog-header.php(19): require_once('C:\\MAMP\\htdocs\\...')
+#2 C:\MAMP\htdocs\Eco-alt\index.php(17): require('C:\\MAMP\\htdocs\\...')
+#3 {main}
+  thrown in C:\MAMP\htdocs\Eco-alt\wp-content\themes\eco-alt\page-template\objects.php on line 4
+
+2022-02-14T14:08:23+00:00 CRITICAL Uncaught Error: Call to a member function get_id() on null in C:\MAMP\htdocs\Eco-alt\wp-content\themes\eco-alt\page-template\objects.php:4
+Stack trace:
+#0 C:\MAMP\htdocs\Eco-alt\wp-includes\template-loader.php(106): include()
+#1 C:\MAMP\htdocs\Eco-alt\wp-blog-header.php(19): require_once('C:\\MAMP\\htdocs\\...')
+#2 C:\MAMP\htdocs\Eco-alt\index.php(17): require('C:\\MAMP\\htdocs\\...')
+#3 {main}
+  thrown in C:\MAMP\htdocs\Eco-alt\wp-content\themes\eco-alt\page-template\objects.php on line 4
+
+2022-02-14T14:08:24+00:00 CRITICAL Uncaught Error: Call to a member function get_id() on null in C:\MAMP\htdocs\Eco-alt\wp-content\themes\eco-alt\page-template\objects.php:4
+Stack trace:
+#0 C:\MAMP\htdocs\Eco-alt\wp-includes\template-loader.php(106): include()
+#1 C:\MAMP\htdocs\Eco-alt\wp-blog-header.php(19): require_once('C:\\MAMP\\htdocs\\...')
+#2 C:\MAMP\htdocs\Eco-alt\index.php(17): require('C:\\MAMP\\htdocs\\...')
+#3 {main}
+  thrown in C:\MAMP\htdocs\Eco-alt\wp-content\themes\eco-alt\page-template\objects.php on line 4
+

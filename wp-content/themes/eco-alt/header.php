@@ -49,7 +49,7 @@
 
             </nav>
             <div class="header__contact">
-                <a href="tel:+<?php the_field('phone'); ?>">+<?php the_field('phone'); ?></a>
+                <a href="tel:+380977473654">+380977473654</a>
             </div>
             <div class="heaedr__cart">
                 <a href="<?php echo esc_url(wc_get_cart_url()); ?> " class="cart">

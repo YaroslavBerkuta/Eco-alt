@@ -34,9 +34,9 @@
         <div class="footer__flex">
             <div class="footer__item">
                 <ul>
-                    <li><?php the_field('address'); ?></li>
-                    <li><a href="tel:+<?php the_field('phone'); ?>">+<?php the_field('phone'); ?></a></li>
-                    <li><a href="mailto:<?php the_field('e_mail'); ?>"><?php the_field('e_mail'); ?></a></li>
+                    <li>Poroshenka 1</li>
+                    <li><a href="tel:+380977473654; ?>">+380977473654</a></li>
+                    <li><a href="mailto:vadimpichura007@gmail.com">vadimpichura007@gmail.com</a></li>
                 </ul>
             </div>
         </div>

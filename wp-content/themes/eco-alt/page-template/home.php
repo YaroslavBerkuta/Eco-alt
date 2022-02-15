@@ -68,14 +68,20 @@ get_header();
             </div>
             <div class="brand-swiper">
                 <div class="brand-wrapper">
-                    <a class="brand-item" href="shop?="><img src="img/ch.png" alt=""/></a>
-                    <a class="brand-item" href="shop"><img src="img/toshiba.png" alt=""/></a>
-                    <a class="brand-item" href="shop"><img src="img/gree.png" alt=""/></a>
-                    <a class="brand-item" href="shop"><img src="img/leberg.png" alt=""/></a>
-                    <a class="brand-item" href="shop"><img src="img/midea.png" alt=""/></a>
-                    <a class="brand-item" href="shop"><img src="img/mitsubishi.png" alt=""/></a>
-                    <a class="brand-item" href="shop"><img src="img/neoclima.png" alt=""/></a>
-                    <a class="brand-item" href="shop"><img src="img/panasonic.png" alt=""/></a>
+                    <?php
+                    $args = array(
+
+                        'taxonomy' => 'vendors',
+
+                    );
+                    $vendors = get_terms($args);
+                   // foreach ($vendors as $vendor) { ?>
+                        <a class="brand-item" href=""><img src="<?php the_field('brand_logo'); ?>" alt=""/></a>
+
+                        <?php
+                   // }
+                    ?>
+
                 </div>
         </section>
         <section class="section-relative-navigation">
@@ -116,27 +122,27 @@ get_header();
                         if ($mypost_Query->have_posts()) {
                             while ($mypost_Query->have_posts()) {
                                 $mypost_Query->the_post();
-                                    ?>
-                                    <a class="filter__cart" href="<?php echo get_the_permalink(); ?>"
-                                       data-category-id="<?php echo implode(';', $product->get_category_ids()) ?>">
-                                        <div class="tovar__label">
-                                            <div class="label">
-                                                <p>хіт</p>
-                                            </div>
+                                ?>
+                                <a class="filter__cart" href="<?php echo get_the_permalink(); ?>"
+                                   data-category-id="<?php echo implode(';', $product->get_category_ids()) ?>">
+                                    <div class="tovar__label">
+                                        <div class="label">
+                                            <p>хіт</p>
                                         </div>
-                                        <div class="filter__img">
-                                            <img src="<?php $product_image_url = get_the_post_thumbnail_url($product->get_id(), 'large');
-                                            echo $product_image_url; ?>" alt=""/>
-                                        </div>
-                                        <div class="tovar__info">
-                                            <p class="art"><?php echo $product->get_sku(); ?></p>
-                                            <h2 class="tovar__name"><?php echo $product->name; ?></h2>
-                                            <p class="tovar__model"><?php echo $product->get_attribute('model'); ?></p>
-                                            <p class="price"><?php echo $product->get_price(); ?></p>
-                                        </div>
-                                    </a>
+                                    </div>
+                                    <div class="filter__img">
+                                        <img src="<?php $product_image_url = get_the_post_thumbnail_url($product->get_id(), 'large');
+                                        echo $product_image_url; ?>" alt=""/>
+                                    </div>
+                                    <div class="tovar__info">
+                                        <p class="art"><?php echo $product->get_sku(); ?></p>
+                                        <h2 class="tovar__name"><?php echo $product->name; ?></h2>
+                                        <p class="tovar__model"><?php echo $product->get_attribute('model'); ?></p>
+                                        <p class="price"><?php echo $product->get_price(); ?></p>
+                                    </div>
+                                </a>
 
-                                    <?php
+                                <?php
                             }
                         } else {
                             echo('<p>Извините, нет товаров.</p>');

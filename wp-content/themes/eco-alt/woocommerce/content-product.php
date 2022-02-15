@@ -3,6 +3,9 @@ global $product;
 global $persentage;
 $product_image_url = get_the_post_thumbnail_url($product->get_id(), 'large');//головне фото товара
 $vendors=get_the_terms($product->get_id(),'vendors');
+$compressors=get_the_terms($product->get_id(),'compressor');
+$area=get_the_terms($product->get_id(),'area');
+$modes=get_the_terms($product->get_id(),'mode');
      //print_r($vendors);
 
 ?>
@@ -10,9 +13,15 @@ $vendors=get_the_terms($product->get_id(),'vendors');
      data-vendor="<?php foreach ($vendors as $vendor) {
     echo $vendor->name;
 }?>"
-data-compressor="<?php echo $product->get_attribute('Компресор'); ?>"
-data-area="<?php echo $product->get_attribute('Площа приміщення'); ?>"
-data-mode="<?php echo $product->get_attribute('Режим роботи'); ?>"
+data-compressor="<?php foreach ($compressors as $compressor) {
+    echo $compressor->name;
+}?>"
+data-area="<?php foreach ($area as $val) {
+    echo $val->name;
+}?>"
+data-mode="<?php foreach ($modes as $mode) {
+    echo $mode->name;
+}?>"
 data-price="<?php echo $product->get_price(); ?>"
 >
     <?php
@@ -41,16 +50,17 @@ data-price="<?php echo $product->get_price(); ?>"
         <p class="tovar__model"><?php echo $product->get_attribute('модель'); ?></p>
         <p class="price"><?php echo $product->get_price(); ?></p>
         <div class="size__flex">
-            <?php // Получаем вариации, если они есть у товара
-            if ($product->is_type('variable')) { # вариативный товар \
-                ?>
+            <?php
 
-            <?php } else { # НЕ вариативный товар ?>
-
-           <?php } ?>
+            ?>
         </div>
         <form class="cart" action="<?php echo esc_url($product->add_to_cart_url()); ?>" method="post" enctype="multipart/form-data">
             <button class="add-cart" data-id="<?php the_ID(); ?>" type="submit">В корзину</button>
         </form>
     </div>
 </div>
+
+
+
+
+

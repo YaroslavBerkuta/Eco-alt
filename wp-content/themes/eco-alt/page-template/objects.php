@@ -1,6 +1,7 @@
 <?php
 /*Template name: objects*/
 get_header();
+
 ?>
 
     <main>
@@ -41,9 +42,11 @@ get_header();
                         $posts = get_posts($args);
                         $terms=get_the_taxonomies();
                         foreach ($posts as $post) {
-
+                            $objects=get_the_terms(get_the_ID(),'objects');
                             setup_postdata($post); ?>
-                            <div class="object__item" data-category="<?php echo $object->name;?>">
+                            <div class="object__item" data-category="<?php foreach ($objects as $object){
+                                echo $object->name;
+                            }?>">
                                 <img src="<?php echo get_the_post_thumbnail_url() ?>" alt=""/>
                             </div>
                         <?php }
